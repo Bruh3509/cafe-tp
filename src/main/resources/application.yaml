@@ -1,4 +1,6 @@
 spring:
   application:
     name: cafe
+  flyway:
+    enabled: false
   output.ansi.enabled: ALWAYS

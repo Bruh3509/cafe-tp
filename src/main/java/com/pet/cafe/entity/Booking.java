@@ -4,7 +4,9 @@ import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "Guests")
@@ -30,4 +32,6 @@ public class Booking {
     @JoinColumn(name = "room_number", referencedColumnName = "room_number")
     Room room;
 
+    @OneToMany(mappedBy = "booking")
+    private List<BookingGuest> bookingGuests = new ArrayList<>();
 }

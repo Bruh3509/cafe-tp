@@ -19,6 +19,6 @@ public class BookingGuest {
 
     @ManyToOne
     @MapsId("booking_id")
-    @JoinColumn(name = "booking_id", referencedColumnName = "bookingId")
+    @JoinColumn(name = "booking_id", referencedColumnName = "booking_id")
     Booking booking;
 }

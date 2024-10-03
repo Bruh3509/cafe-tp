@@ -1,11 +1,11 @@
 package com.pet.cafe.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "Guests")
@@ -24,4 +24,7 @@ public class Guest {
 
     @Column(name = "last_name")
     String lastName;
+
+    @OneToMany(mappedBy = "guest")
+    private List<BookingGuest> bookingGuests = new ArrayList<>();
 }

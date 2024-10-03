@@ -1,6 +1,8 @@
 package com.pet.cafe.controller;
 
+import com.pet.cafe.dto.GuestDTO;
 import com.pet.cafe.dto.RoomDTO;
+import com.pet.cafe.service.GuestService;
 import com.pet.cafe.service.RoomService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -13,32 +15,33 @@ import java.util.List;
 @RequestMapping("/guests")
 @RequiredArgsConstructor
 public class GuestController {
-    private final RoomService service;
+    private final GuestService service;
 
     @GetMapping
-    public ResponseEntity<List<RoomDTO>> getUsers(){
-        return new ResponseEntity<>(service.getRooms(), HttpStatus.OK);
+    public ResponseEntity<List<GuestDTO>> getGuests(){
+        return new ResponseEntity<>(service.getGuests(), HttpStatus.OK);
     }
 
-    @PostMapping
-    public ResponseEntity<Void> addRoom(int id, @RequestBody RoomDTO request){
-        service.addRoom(id, request);
+    @PostMapping("/{id}")
+    public ResponseEntity<Void> addGuest(@PathVariable String id, @RequestBody GuestDTO guestDTO){
+        service.addGuest(id, guestDTO);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<RoomDTO> getRoom(@PathVariable int id){
-        return new ResponseEntity<>(service.getRoom(id), HttpStatus.OK);
+    public ResponseEntity<GuestDTO> getGuest(@PathVariable String id){
+        return new ResponseEntity<>(service.getGuest(id), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteRoom(@PathVariable int id){
-        service.deleteRoom(id);
+    public ResponseEntity<Void> deleteGuest(@PathVariable String id){
+        service.deleteGuest(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Void> updateRoom(int id, @RequestBody RoomDTO request){
+    public ResponseEntity<Void> updateGuest(@PathVariable String id, @RequestBody GuestDTO guestDTO){
+        service.updateGuest(id, guestDTO);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }

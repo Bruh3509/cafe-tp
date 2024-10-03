@@ -21,22 +21,22 @@ public class UserServiceImpl implements UserService {
     UserRepository repository;
     UserMapper mapper;
 
-    public List<UserDTO> getUsers(){
+    public List<UserDTO> getUsers() {
         return mapper.entitiesToDto(repository.findAll());
     }
 
-    public UserDTO getUser(String id){
+    public UserDTO getUser(String id) {
         Optional<User> user = repository.findById(id);
-        if(user.isEmpty()){
+        if (user.isEmpty()) {
             throw new EntityNotFoundException("User not found!");
         }
 
         return mapper.entityToDto(user.get());
     }
 
-    public void deleteUser(String id){
+    public void deleteUser(String id) {
         Optional<User> user = repository.findById(id);
-        if(user.isEmpty()){
+        if (user.isEmpty()) {
             throw new EntityNotFoundException("User not found!");
         }
 
@@ -45,7 +45,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void updateUser(String id, UserDTO userDTO) {
-        if(!repository.existsById(id)){
+        if (!repository.existsById(id)) {
             throw new EntityNotFoundException("User not found.");
         }
 
@@ -55,7 +55,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void createUser(String id, UserDTO request) {
-       User user = mapper.dtoToEntity(request, id);
-       repository.save(user);
+        User user = mapper.dtoToEntity(request, id);
+        repository.save(user);
     }
 }

@@ -29,7 +29,7 @@ public class RoomServiceImpl implements RoomService {
     @Override
     public RoomDTO getRoom(int id) {
         Optional<Room> user = repository.findById(id);
-        if(user.isEmpty()){
+        if (user.isEmpty()) {
             throw new EntityNotFoundException("Room not found!");
         }
 
@@ -39,7 +39,7 @@ public class RoomServiceImpl implements RoomService {
     @Override
     public void deleteRoom(int id) {
         Optional<Room> user = repository.findById(id);
-        if(user.isEmpty()){
+        if (user.isEmpty()) {
             throw new EntityNotFoundException("Room not found!");
         }
 
@@ -48,7 +48,7 @@ public class RoomServiceImpl implements RoomService {
 
     @Override
     public void updateRoom(int id, RoomDTO roomDTO) {
-        if(!repository.existsById(id)){
+        if (!repository.existsById(id)) {
             throw new EntityNotFoundException("Room not found.");
         }
 

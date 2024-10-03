@@ -29,7 +29,7 @@ public class GuestServiceImpl implements GuestService {
     @Override
     public GuestDTO getGuest(String id) {
         Optional<Guest> guest = repository.findById(id);
-        if(guest.isEmpty()){
+        if (guest.isEmpty()) {
             throw new EntityNotFoundException("Guest not found!");
         }
 
@@ -39,7 +39,7 @@ public class GuestServiceImpl implements GuestService {
     @Override
     public void deleteGuest(String id) {
         Optional<Guest> user = repository.findById(id);
-        if(user.isEmpty()){
+        if (user.isEmpty()) {
             throw new EntityNotFoundException("Guest not found!");
         }
 
@@ -48,8 +48,8 @@ public class GuestServiceImpl implements GuestService {
 
     @Override
     public void updateGuest(String id, GuestDTO guestDTO) {
-        if(!repository.existsById(id)){
-            throw new EntityNotFoundException("Room not found.");
+        if (!repository.existsById(id)) {
+            throw new EntityNotFoundException("Guest not found.");
         }
 
         Guest guest = mapper.dtoToEntity(guestDTO, id);

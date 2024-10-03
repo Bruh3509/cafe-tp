@@ -2,11 +2,16 @@ package com.pet.cafe.entity;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.experimental.FieldDefaults;
 
 @Entity
-@Table(name = "Bookings_Guests")
 @FieldDefaults(level = AccessLevel.PRIVATE)
+@NoArgsConstructor
+@Getter
+@Setter
 
 public class BookingGuest {
     @EmbeddedId

@@ -2,6 +2,7 @@ package com.pet.cafe.entity;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
 import java.math.BigDecimal;
@@ -9,7 +10,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "Rooms")
+@NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 
 public class Room {
@@ -28,6 +29,15 @@ public class Room {
 
     @Column(name = "description")
     String description;
+
+    public Room(int roomNumber, int capacity, String roomType, BigDecimal costPerNight, String description, String additionalFeatures) {
+        this.roomNumber = roomNumber;
+        this.capacity = capacity;
+        this.roomType = roomType;
+        this.costPerNight = costPerNight;
+        this.description = description;
+        this.additionalFeatures = additionalFeatures;
+    }
 
     @Column(name = "additional_features")
     String additionalFeatures;

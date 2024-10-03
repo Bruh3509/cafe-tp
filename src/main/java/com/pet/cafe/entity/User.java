@@ -2,14 +2,19 @@ package com.pet.cafe.entity;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.experimental.FieldDefaults;
 
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "Users")
 @FieldDefaults(level = AccessLevel.PRIVATE)
+@NoArgsConstructor
+@Getter
+@Setter
 
 public class User {
     @Id
@@ -30,6 +35,15 @@ public class User {
 
     @Column(name = "phone_number")
     String phoneNumber;
+
+    public User(String passportId, String email, String firstName, String secondName, String lastName, String phoneNumber) {
+        this.passportId = passportId;
+        this.email = email;
+        this.firstName = firstName;
+        this.secondName = secondName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+    }
 
     @OneToMany(mappedBy = "user")
     Set<Booking> bookings = new HashSet<>();

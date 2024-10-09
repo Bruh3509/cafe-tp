@@ -16,7 +16,7 @@ import java.util.List;
 public class UserController {
     private final UserService service;
 
-    @GetMapping
+    @GetMapping(produces = "application/json")
     public ResponseEntity<List<UserDTO>> getUsers(){
         return new ResponseEntity<>(service.getUsers(), HttpStatus.OK);
     }

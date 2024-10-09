@@ -4,12 +4,14 @@ import com.pet.cafe.dto.RoomDTO;
 import com.pet.cafe.entity.Room;
 import org.mapstruct.Context;
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 
 import java.util.List;
 
 @Mapper(componentModel = "spring")
 public interface RoomMapper {
-    Room dtoToEntity(RoomDTO dto, @Context long id);
+    @Mapping(target = "roomNumber", source = "id")
+    Room dtoToEntity(RoomDTO dto, int id);
 
     RoomDTO entityToDto(Room room);
 

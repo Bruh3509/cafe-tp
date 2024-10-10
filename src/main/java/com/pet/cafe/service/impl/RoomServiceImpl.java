@@ -12,7 +12,6 @@ import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -28,31 +27,34 @@ public class RoomServiceImpl implements RoomService {
 
     @Override
     public RoomDTO getRoom(int id) {
-        Optional<Room> user = repository.findById(id);
-        if (user.isEmpty()) {
-            throw new EntityNotFoundException("Room not found!");
-        }
+        var room = repository
+                .findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Room not found!"));
 
-        return mapper.entityToDto(user.get());
+        return mapper.entityToDto(room);
     }
 
     @Override
     public void deleteRoom(int id) {
-        Optional<Room> user = repository.findById(id);
-        if (user.isEmpty()) {
-            throw new EntityNotFoundException("Room not found!");
-        }
+        var room = repository
+                .findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Room not found!"));
 
-        repository.delete(user.get());
+        repository.delete(room);
     }
 
     @Override
     public void updateRoom(int id, RoomDTO roomDTO) {
-        if (!repository.existsById(id)) {
-            throw new EntityNotFoundException("Room not found.");
-        }
+        var room = repository
+                .findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Room not found."));
 
-        Room room = mapper.dtoToEntity(roomDTO, id);
+        room.setCapacity(roomDTO.capacity());
+        room.setRoomType(roomDTO.roomType());
+        room.setCostPerNight(roomDTO.costPerNight());
+        room.setDescription(roomDTO.description());
+        room.setAdditionalFeatures(roomDTO.additionalFeatures());
+
         repository.save(room);
     }
 

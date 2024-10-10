@@ -28,31 +28,31 @@ public class GuestServiceImpl implements GuestService {
 
     @Override
     public GuestDTO getGuest(String id) {
-        Optional<Guest> guest = repository.findById(id);
-        if (guest.isEmpty()) {
-            throw new EntityNotFoundException("Guest not found!");
-        }
+        var guest = repository
+                .findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Guest not found!"));
 
-        return mapper.entityToDto(guest.get());
+        return mapper.entityToDto(guest);
     }
 
     @Override
     public void deleteGuest(String id) {
-        Optional<Guest> user = repository.findById(id);
-        if (user.isEmpty()) {
-            throw new EntityNotFoundException("Guest not found!");
-        }
+        var guest = repository
+                .findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Guest not found!"));
 
-        repository.delete(user.get());
+        repository.delete(guest);
     }
 
     @Override
     public void updateGuest(String id, GuestDTO guestDTO) {
-        if (!repository.existsById(id)) {
-            throw new EntityNotFoundException("Guest not found.");
-        }
+        var guest = repository
+                .findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Guest not found."));
 
-        Guest guest = mapper.dtoToEntity(guestDTO, id);
+        guest.setFirstName(guestDTO.firstName());
+        guest.setSecondName(guestDTO.secondName());
+        guest.setLastName(guestDTO.lastName());
         repository.save(guest);
     }
 

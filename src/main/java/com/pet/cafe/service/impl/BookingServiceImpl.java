@@ -12,7 +12,6 @@ import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -28,31 +27,31 @@ public class BookingServiceImpl implements BookingService {
 
     @Override
     public BookingDTO getBooking(long id) {
-        Optional<Booking> booking = repository.findById(id);
-        if (booking.isEmpty()) {
-            throw new EntityNotFoundException("Booking not found!");
-        }
+        var booking = repository
+                .findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Booking not found!"));
 
-        return mapper.entityToDto(booking.get());
+        return mapper.entityToDto(booking);
     }
 
     @Override
     public void deleteBooking(long id) {
-        Optional<Booking> booking = repository.findById(id);
-        if (booking.isEmpty()) {
-            throw new EntityNotFoundException("Booking not found!");
-        }
+        var booking = repository
+                .findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Booking not found!"));
 
-        repository.delete(booking.get());
+        repository.delete(booking);
     }
 
     @Override
     public void updateBooking(long id, BookingDTO bookingDTO) {
-        if (!repository.existsById(id)) {
-            throw new EntityNotFoundException("Booking not found.");
-        }
+        var booking = repository
+                .findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Booking not found."));
 
-        Booking booking = mapper.dtoToEntity(bookingDTO);
+        booking.setDateTo(bookingDTO.dateTo());
+        booking.setDateFrom(bookingDTO.dateFrom());
+
         repository.save(booking);
     }
 

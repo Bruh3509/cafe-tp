@@ -26,30 +26,33 @@ public class UserServiceImpl implements UserService {
     }
 
     public UserDTO getUser(String id) {
-        Optional<User> user = repository.findById(id);
-        if (user.isEmpty()) {
-            throw new EntityNotFoundException("User not found!");
-        }
+        var user = repository
+                .findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("User not found!"));
 
-        return mapper.entityToDto(user.get());
+        return mapper.entityToDto(user);
     }
 
     public void deleteUser(String id) {
-        Optional<User> user = repository.findById(id);
-        if (user.isEmpty()) {
-            throw new EntityNotFoundException("User not found!");
-        }
+        var user = repository
+                .findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("User not found!"));
 
-        repository.delete(user.get());
+        repository.delete(user);
     }
 
     @Override
     public void updateUser(String id, UserDTO userDTO) {
-        if (!repository.existsById(id)) {
-            throw new EntityNotFoundException("User not found.");
-        }
+        var user = repository
+                .findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("User not found."));
 
-        User user = mapper.dtoToEntity(userDTO, id);
+        user.setFirstName(userDTO.firstName());
+        user.setSecondName(userDTO.secondName());
+        user.setLastName(userDTO.lastName());
+        user.setEmail(userDTO.email());
+        user.setPhoneNumber(userDTO.phoneNumber());
+
         repository.save(user);
     }
 

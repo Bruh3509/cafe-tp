@@ -1,4 +1,24 @@
 spring:
   application:
     name: cafe
+  flyway:
+    enabled: false
   output.ansi.enabled: ALWAYS
+  datasource:
+    url: jdbc:mysql://localhost:3306/cafe?allowPublicKeyRetrieval=true
+    username: user
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    display-request-duration: true
+    try-it-out-enabled: true
+    disable-swagger-default-url: true

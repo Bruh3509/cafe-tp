@@ -27,7 +27,7 @@ public class GuestServiceImpl implements GuestService {
     }
 
     @Override
-    public GuestDTO getGuest(String id) {
+    public GuestDTO getGuest(long id) {
         var guest = repository
                 .findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Guest not found!"));
@@ -36,7 +36,7 @@ public class GuestServiceImpl implements GuestService {
     }
 
     @Override
-    public void deleteGuest(String id) {
+    public void deleteGuest(long id) {
         var guest = repository
                 .findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Guest not found!"));
@@ -45,7 +45,7 @@ public class GuestServiceImpl implements GuestService {
     }
 
     @Override
-    public void updateGuest(String id, GuestDTO guestDTO) {
+    public GuestDTO updateGuest(long id, GuestDTO guestDTO) {
         var guest = repository
                 .findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Guest not found."));
@@ -53,12 +53,12 @@ public class GuestServiceImpl implements GuestService {
         guest.setFirstName(guestDTO.firstName());
         guest.setSecondName(guestDTO.secondName());
         guest.setLastName(guestDTO.lastName());
-        repository.save(guest);
+        return mapper.entityToDto(repository.save(guest));
     }
 
     @Override
-    public void addGuest(String id, GuestDTO guestDTO) {
-        Guest guest = mapper.dtoToEntity(guestDTO, id);
-        repository.save(guest);
+    public GuestDTO addGuest(GuestDTO guestDTO) {
+        Guest guest = mapper.dtoToEntity(guestDTO);
+        return mapper.entityToDto(repository.save(guest));
     }
 }

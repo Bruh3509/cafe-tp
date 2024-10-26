@@ -44,7 +44,7 @@ public class BookingServiceImpl implements BookingService {
     }
 
     @Override
-    public void updateBooking(long id, BookingDTO bookingDTO) {
+    public BookingDTO updateBooking(long id, BookingDTO bookingDTO) {
         var booking = repository
                 .findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Booking not found."));
@@ -52,12 +52,12 @@ public class BookingServiceImpl implements BookingService {
         booking.setDateTo(bookingDTO.dateTo());
         booking.setDateFrom(bookingDTO.dateFrom());
 
-        repository.save(booking);
+        return mapper.entityToDto(repository.save(booking));
     }
 
     @Override
-    public void addBooking(BookingDTO bookingDTO) {
+    public BookingDTO addBooking(BookingDTO bookingDTO) {
         Booking booking = mapper.dtoToEntity(bookingDTO);
-        repository.save(booking);
+        return mapper.entityToDto(repository.save(booking));
     }
 }

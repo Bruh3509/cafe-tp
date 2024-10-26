@@ -18,6 +18,10 @@ import java.util.Set;
 
 public class User {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id")
+    long userId;
+
     @Column(name = "passport_id")
     String passportId;
 
@@ -36,7 +40,8 @@ public class User {
     @Column(name = "phone_number")
     String phoneNumber;
 
-    public User(String passportId, String email, String firstName, String secondName, String lastName, String phoneNumber) {
+    public User(long userId, String passportId, String email, String firstName, String secondName, String lastName, String phoneNumber) {
+        this.userId = userId;
         this.passportId = passportId;
         this.email = email;
         this.firstName = firstName;

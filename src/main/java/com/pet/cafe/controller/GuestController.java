@@ -22,25 +22,25 @@ public class GuestController {
         return new ResponseEntity<>(service.getGuests(), HttpStatus.OK);
     }
 
-    @PostMapping("/{id}")
-    public ResponseEntity<Void> addGuest(@PathVariable String id, @RequestBody GuestDTO guestDTO){
-        service.addGuest(id, guestDTO);
+    @PostMapping()
+    public ResponseEntity<Void> addGuest(@RequestBody GuestDTO guestDTO){
+        service.addGuest(guestDTO);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<GuestDTO> getGuest(@PathVariable String id){
+    public ResponseEntity<GuestDTO> getGuest(@PathVariable long id){
         return new ResponseEntity<>(service.getGuest(id), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteGuest(@PathVariable String id){
+    public ResponseEntity<Void> deleteGuest(@PathVariable long id){
         service.deleteGuest(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Void> updateGuest(@PathVariable String id, @RequestBody GuestDTO guestDTO){
+    public ResponseEntity<Void> updateGuest(@PathVariable Long id, @RequestBody GuestDTO guestDTO){
         service.updateGuest(id, guestDTO);
         return new ResponseEntity<>(HttpStatus.OK);
     }

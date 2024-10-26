@@ -8,11 +8,11 @@ import java.util.List;
 public interface GuestService {
     List<GuestDTO> getGuests();
 
-    GuestDTO getGuest(String id);
+    GuestDTO getGuest(long id);
 
-    void deleteGuest(String id);
+    void deleteGuest(long id);
 
-    void updateGuest(String id, GuestDTO guestDTO);
+    GuestDTO updateGuest(long id, GuestDTO guestDTO);
 
-    void addGuest(String id, GuestDTO guestDTO);
+    GuestDTO addGuest(GuestDTO guestDTO);
 }

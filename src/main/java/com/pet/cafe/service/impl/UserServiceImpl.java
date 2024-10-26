@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService {
         return mapper.entitiesToDto(repository.findAll());
     }
 
-    public UserDTO getUser(String id) {
+    public UserDTO getUser(long id) {
         var user = repository
                 .findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("User not found!"));
@@ -33,7 +33,7 @@ public class UserServiceImpl implements UserService {
         return mapper.entityToDto(user);
     }
 
-    public void deleteUser(String id) {
+    public void deleteUser(long id) {
         var user = repository
                 .findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("User not found!"));
@@ -42,23 +42,24 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void updateUser(String id, UserDTO userDTO) {
+    public UserDTO updateUser(long id, UserDTO userDTO) {
         var user = repository
                 .findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("User not found."));
 
+        user.setPassportId(userDTO.passportId());
         user.setFirstName(userDTO.firstName());
         user.setSecondName(userDTO.secondName());
         user.setLastName(userDTO.lastName());
         user.setEmail(userDTO.email());
         user.setPhoneNumber(userDTO.phoneNumber());
 
-        repository.save(user);
+        return mapper.entityToDto(repository.save(user));
     }
 
     @Override
-    public void createUser(String id, UserDTO request) {
-        User user = mapper.dtoToEntity(request, id);
-        repository.save(user);
+    public UserDTO createUser(UserDTO request) {
+        User user = mapper.dtoToEntity(request);
+        return mapper.entityToDto(repository.save(user));
     }
 }

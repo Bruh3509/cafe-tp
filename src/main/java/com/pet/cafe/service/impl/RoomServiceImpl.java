@@ -44,7 +44,7 @@ public class RoomServiceImpl implements RoomService {
     }
 
     @Override
-    public void updateRoom(int id, RoomDTO roomDTO) {
+    public RoomDTO updateRoom(int id, RoomDTO roomDTO) {
         var room = repository
                 .findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Room not found."));
@@ -55,12 +55,12 @@ public class RoomServiceImpl implements RoomService {
         room.setDescription(roomDTO.description());
         room.setAdditionalFeatures(roomDTO.additionalFeatures());
 
-        repository.save(room);
+        return mapper.entityToDto(repository.save(room));
     }
 
     @Override
-    public void addRoom(int id, RoomDTO roomDTO) {
+    public RoomDTO addRoom(int id, RoomDTO roomDTO) {
         Room room = mapper.dtoToEntity(roomDTO, id);
-        repository.save(room);
+        return mapper.entityToDto(repository.save(room));
     }
 }

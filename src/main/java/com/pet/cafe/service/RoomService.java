@@ -12,7 +12,7 @@ public interface RoomService {
 
     void deleteRoom(int id);
 
-    void updateRoom(int id, RoomDTO roomDTO);
+    RoomDTO updateRoom(int id, RoomDTO roomDTO);
 
-    void addRoom(int id, RoomDTO roomDTO);
+    RoomDTO addRoom(int id, RoomDTO roomDTO);
 }

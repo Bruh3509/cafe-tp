@@ -30,7 +30,7 @@ public class Booking {
     Date dateTo;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "passport_id")
+    @JoinColumn(name = "user_id", referencedColumnName = "user_id")
     User user;
 
     @OneToOne

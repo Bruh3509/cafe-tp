@@ -10,8 +10,8 @@ import java.util.List;
 
 @Mapper(componentModel = "spring")
 public interface GuestMapper {
-    @Mapping(target = "phoneNumber", source = "id")
-    Guest dtoToEntity(GuestDTO dto, String id);
+    //@Mapping(target = "phoneNumber", source = "id")
+    Guest dtoToEntity(GuestDTO dto);
 
     GuestDTO entityToDto(Guest guest);
 

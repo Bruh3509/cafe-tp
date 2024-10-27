@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.Optional;
 
 @ExtendWith(MockitoExtension.class)
-public class UserServiceTests {
+class UserServiceTests {
     @Mock
     private UserRepository repository;
     @Mock
@@ -30,7 +30,7 @@ public class UserServiceTests {
     private UserServiceImpl service;
 
     @Test
-    public void testGetWhenEntityExists(){
+    void testGetWhenEntityExists(){
         long id = 1;
         User user = mock(User.class);
         UserDTO userDTO = mock(UserDTO.class);
@@ -43,7 +43,7 @@ public class UserServiceTests {
     }
 
     @Test
-    public void testGetWhenEntityNotExists(){
+    void testGetWhenEntityNotExists(){
         long id = 1;
         when(repository.findById(id)).thenReturn(Optional.empty());
 
@@ -51,7 +51,7 @@ public class UserServiceTests {
     }
 
     @Test
-    public void testGetAll(){
+    void testGetAll(){
         List<User> users = mock(List.class);
         List<UserDTO> userDTOS = mock(List.class);
 
@@ -63,7 +63,7 @@ public class UserServiceTests {
     }
 
     @Test
-    public void testCreate(){
+    void testCreate(){
         User user = mock(User.class);
         UserDTO userDTO = mock(UserDTO.class);
 
@@ -76,7 +76,7 @@ public class UserServiceTests {
     }
 
     @Test
-    public void testUpdate(){
+    void testUpdate(){
         long id = 1;
         UserDTO userDTO = getUserDto();
         User user = getUser(id);
@@ -90,7 +90,7 @@ public class UserServiceTests {
     }
 
     @Test
-    public void testUpdateWhenEntityNotExists(){
+    void testUpdateWhenEntityNotExists(){
         long id = 1;
         UserDTO userDTO = mock(UserDTO.class);
 
@@ -99,7 +99,7 @@ public class UserServiceTests {
     }
 
     @Test
-    public void testDelete(){
+    void testDelete(){
         long id = 1;
         User user = getUser(id);
 
@@ -109,7 +109,7 @@ public class UserServiceTests {
     }
 
     @Test
-    public void testDeleteWhenEntityNotExists(){
+    void testDeleteWhenEntityNotExists(){
         long id = 1;
 
         when(repository.findById(id)).thenReturn(Optional.empty());

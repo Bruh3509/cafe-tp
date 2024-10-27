@@ -8,6 +8,7 @@ class CafeApplicationTests {
 
 	@Test
 	void contextLoads() {
+		//comment for sonar lint
 	}
 
 }

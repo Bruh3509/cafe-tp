@@ -20,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-public class RoomServiceTests {
+class RoomServiceTests {
     @Mock
     private RoomRepository repository;
     @Mock
@@ -29,7 +29,7 @@ public class RoomServiceTests {
     private RoomServiceImpl service;
 
     @Test
-    public void testGetWhenEntityExists(){
+    void testGetWhenEntityExists(){
         int id = 1;
         Room room = mock(Room.class);
         RoomDTO roomDTO = mock(RoomDTO.class);
@@ -42,7 +42,7 @@ public class RoomServiceTests {
     }
 
     @Test
-    public void testGetWhenEntityNotExists(){
+    void testGetWhenEntityNotExists(){
         int id = 1;
         when(repository.findById(id)).thenReturn(Optional.empty());
 
@@ -50,7 +50,7 @@ public class RoomServiceTests {
     }
 
     @Test
-    public void testGetAll(){
+    void testGetAll(){
         List<Room> rooms = mock(List.class);
         List<RoomDTO> roomDTOS = mock(List.class);
 
@@ -62,7 +62,7 @@ public class RoomServiceTests {
     }
 
     @Test
-    public void testCreate(){
+    void testCreate(){
         int roomNumber = 1;
         Room room = mock(Room.class);
         RoomDTO roomDTO = mock(RoomDTO.class);
@@ -76,7 +76,7 @@ public class RoomServiceTests {
     }
 
     @Test
-    public void testUpdate(){
+    void testUpdate(){
         int id = 1;
         RoomDTO roomDto = getRoomDto();
         Room room = getRoom(id);
@@ -90,7 +90,7 @@ public class RoomServiceTests {
     }
 
     @Test
-    public void testUpdateWhenEntityNotExists(){
+    void testUpdateWhenEntityNotExists(){
         int id = 1;
         RoomDTO roomDTO = mock(RoomDTO.class);
 
@@ -99,7 +99,7 @@ public class RoomServiceTests {
     }
 
     @Test
-    public void testDelete(){
+    void testDelete(){
         int id = 1;
         Room room = getRoom(id);
 
@@ -109,15 +109,15 @@ public class RoomServiceTests {
     }
 
     @Test
-    public void testDeleteWhenEntityNotExists(){
+    void testDeleteWhenEntityNotExists(){
         int id = 1;
 
         when(repository.findById(id)).thenReturn(Optional.empty());
         assertThrows(EntityNotFoundException.class, () -> service.deleteRoom(id));
     }
 
-    private Room getRoom(long id){
-        return new Room(1,
+    private Room getRoom(int id){
+        return new Room(id,
                 4,
                 "roomType",
                 new BigDecimal("1.0"),

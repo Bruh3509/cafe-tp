@@ -19,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-public class GuestServiceTests {
+class GuestServiceTests {
     @Mock
     private GuestRepository repository;
     @Mock
@@ -28,7 +28,7 @@ public class GuestServiceTests {
     private GuestServiceImpl service;
 
     @Test
-    public void testGetWhenEntityExists(){
+    void testGetWhenEntityExists(){
         long id = 1;
         Guest guest = mock(Guest.class);
         GuestDTO guestDTO = mock(GuestDTO.class);
@@ -41,7 +41,7 @@ public class GuestServiceTests {
     }
 
     @Test
-    public void testGetWhenEntityNotExists(){
+    void testGetWhenEntityNotExists(){
         long id = 1;
         when(repository.findById(id)).thenReturn(Optional.empty());
 
@@ -49,7 +49,7 @@ public class GuestServiceTests {
     }
 
     @Test
-    public void testGetAll(){
+    void testGetAll(){
         List<Guest> guests = mock(List.class);
         List<GuestDTO> guestDTOS = mock(List.class);
 
@@ -61,7 +61,7 @@ public class GuestServiceTests {
     }
 
     @Test
-    public void testCreate(){
+    void testCreate(){
         Guest guest = mock(Guest.class);
         GuestDTO guestDTO = mock(GuestDTO.class);
 
@@ -74,7 +74,7 @@ public class GuestServiceTests {
     }
 
     @Test
-    public void testUpdate(){
+    void testUpdate(){
         long id = 1;
         GuestDTO guestDTO = getUserDto();
         Guest guest = getUser(id);
@@ -88,7 +88,7 @@ public class GuestServiceTests {
     }
 
     @Test
-    public void testUpdateWhenEntityNotExists(){
+    void testUpdateWhenEntityNotExists(){
         long id = 1;
         GuestDTO userDTO = mock(GuestDTO.class);
 
@@ -97,7 +97,7 @@ public class GuestServiceTests {
     }
 
     @Test
-    public void testDelete(){
+    void testDelete(){
         long id = 1;
         Guest guest = getUser(id);
 
@@ -107,7 +107,7 @@ public class GuestServiceTests {
     }
 
     @Test
-    public void testDeleteWhenEntityNotExists(){
+    void testDeleteWhenEntityNotExists(){
         long id = 1;
 
         when(repository.findById(id)).thenReturn(Optional.empty());

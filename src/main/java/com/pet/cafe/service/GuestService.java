@@ -1,7 +1,6 @@
 package com.pet.cafe.service;
 
 import com.pet.cafe.dto.GuestDTO;
-import com.pet.cafe.dto.RoomDTO;
 
 import java.util.List;
 

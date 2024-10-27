@@ -23,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-public class BookingServiceTests {
+class BookingServiceTests {
     @Mock
     private BookingRepository repository;
     @Mock
@@ -32,7 +32,7 @@ public class BookingServiceTests {
     private BookingServiceImpl service;
 
     @Test
-    public void testGetWhenEntityExists(){
+    void testGetWhenEntityExists(){
         long id = 1;
         Booking booking = mock(Booking.class);
         BookingDTO bookingDTO = mock(BookingDTO.class);
@@ -45,7 +45,7 @@ public class BookingServiceTests {
     }
 
     @Test
-    public void testGetWhenEntityNotExists(){
+    void testGetWhenEntityNotExists(){
         long id = 1;
         when(repository.findById(id)).thenReturn(Optional.empty());
 
@@ -53,7 +53,7 @@ public class BookingServiceTests {
     }
 
     @Test
-    public void testGetAll(){
+    void testGetAll(){
         List<Booking> bookings = mock(List.class);
         List<BookingDTO> bookingDTOS = mock(List.class);
 
@@ -65,7 +65,7 @@ public class BookingServiceTests {
     }
 
     @Test
-    public void testCreate(){
+    void testCreate(){
         Booking booking = mock(Booking.class);
         BookingDTO bookingDTO = mock(BookingDTO.class);
 
@@ -78,7 +78,7 @@ public class BookingServiceTests {
     }
 
     @Test
-    public void testUpdate(){
+    void testUpdate(){
         long id = 1;
         BookingDTO bookingDTO = getBookingDto();
         Booking booking = getBooking(id);
@@ -92,7 +92,7 @@ public class BookingServiceTests {
     }
 
     @Test
-    public void testUpdateWhenEntityNotExists(){
+    void testUpdateWhenEntityNotExists(){
         long id = 1;
         BookingDTO bookingDTO = mock(BookingDTO.class);
 
@@ -101,7 +101,7 @@ public class BookingServiceTests {
     }
 
     @Test
-    public void testDelete(){
+    void testDelete(){
         long id = 1;
         Booking booking = getBooking(id);
 
@@ -111,7 +111,7 @@ public class BookingServiceTests {
     }
 
     @Test
-    public void testDeleteWhenEntityNotExists(){
+    void testDeleteWhenEntityNotExists(){
         long id = 1;
 
         when(repository.findById(id)).thenReturn(Optional.empty());

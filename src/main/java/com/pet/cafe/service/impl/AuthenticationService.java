@@ -37,6 +37,8 @@ public class AuthenticationService {
         user.setEmail(input.getEmail());
         user.setLastName(input.getLastName());
         user.setPassword(passwordEncoder.encode(input.getPassword()));
+        user.setPhoneNumber(input.getPhone_number());
+        user.setSecondName(input.getSecondName());
 
         return userRepository.save(user);}
         catch (Exception e){

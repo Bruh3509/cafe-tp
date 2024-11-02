@@ -15,16 +15,22 @@ import lombok.Setter;
 public class RegisterUserDTO {
 
     @Schema(description = "First Name", example = "Ivan")
-    @Size(max=50, message = "First Name cannot contain more than 50 characters!")
+    @Size(max = 50, message = "First Name cannot contain more than 50 characters!")
     @NotBlank(message = "First Name cannot be empty!")
     private String firstName;
 
     @Schema(description = "Last Name", example = "Ivanov")
-    @Size(max=50, message = "Last Name cannot contain more than 50 characters!")
+    @Size(max = 50, message = "Last Name cannot contain more than 50 characters!")
     @NotBlank(message = "Last Name cannot be empty!")
     private String lastName;
 
+    @Schema(description = "Second Name", example = "GGG")
+    @NotBlank(message = "secondName cannot be empty")
+    private String secondName;
 
+    @Schema(description = "phone_number", example = "+375290000000")
+    @NotBlank(message = " Phone cannot be empty")
+    private String phone_number;
 
 
     @Schema(description = "Email", example = "ivanov@gmail.com")

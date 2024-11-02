@@ -23,6 +23,7 @@ import java.util.Set;
 public class User implements UserDetails {
     @Id
     @Column(name = "passport_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     String passportId;
 
     @Column(name = "email", unique = true, nullable = false)

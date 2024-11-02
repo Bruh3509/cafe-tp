@@ -10,6 +10,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -19,44 +20,54 @@ public class UserController {
     private final UserService service;
 
     @GetMapping(produces = "application/json")
-    public ResponseEntity<List<UserDTO>> getUsers(){
+    public ResponseEntity<List<UserDTO>> getUsers() {
         return new ResponseEntity<>(service.getUsers(), HttpStatus.OK);
     }
 
     @PostMapping("/{id}")
-    public ResponseEntity<Void> createUser(@PathVariable String id, @RequestBody UserDTO request){
+    public ResponseEntity<Void> createUser(@PathVariable String id, @RequestBody UserDTO request) {
         service.createUser(id, request);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<UserDTO> getUser(@PathVariable String id){
+    public ResponseEntity<UserDTO> getUser(@PathVariable String id) {
         return new ResponseEntity<>(service.getUser(id), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteUser(@PathVariable String id){
+    public ResponseEntity<Void> deleteUser(@PathVariable String id) {
         service.deleteUser(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Void> updateUser(String id, @RequestBody UserDTO userDTO){
+    public ResponseEntity<Void> updateUser(String id, @RequestBody UserDTO userDTO) {
         service.updateUser(id, userDTO);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @GetMapping("/me")
-    public ResponseEntity<User> authenticatedUser(){
+    public ResponseEntity<UserDTO> authenticatedUser() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         User curUser = (User) authentication.getPrincipal();
-        return ResponseEntity.ok(curUser);
+        UserDTO userDTO = convertToDto(curUser); // Используйте DTO
+        return ResponseEntity.ok(userDTO);
     }
 
-    @GetMapping("/")
-    public ResponseEntity<List<User>> allUsers() {
-        List <User> users = service.allUsers();
 
-        return ResponseEntity.ok(users);
+    @GetMapping("/")
+    public ResponseEntity<List<UserDTO>> allUsers() {
+        List<User> users = service.allUsers();
+        ArrayList<UserDTO> list = new ArrayList<>();
+        for (User us : users) {
+            list.add(convertToDto(us));
+        }
+
+        return ResponseEntity.ok(list);
+    }
+
+    public UserDTO convertToDto(User user) {
+        return new UserDTO(user.getEmail(), user.getFirstName(), user.getSecondName(), user.getLastName(), user.getPhoneNumber(), user.getPassword(), user.getUsername());
     }
 }

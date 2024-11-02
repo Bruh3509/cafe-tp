@@ -5,10 +5,14 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Data
 @Schema(description = "SignUp")
-public class SignUpRequestDTO {
+@Getter
+@Setter
+public class RegisterUserDTO {
 
     @Schema(description = "First Name", example = "Ivan")
     @Size(max=50, message = "First Name cannot contain more than 50 characters!")

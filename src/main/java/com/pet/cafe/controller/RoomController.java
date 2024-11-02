@@ -1,10 +1,7 @@
 package com.pet.cafe.controller;
 
 import com.pet.cafe.dto.RoomDTO;
-import com.pet.cafe.dto.UserDTO;
-import com.pet.cafe.entity.User;
 import com.pet.cafe.service.RoomService;
-import com.pet.cafe.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

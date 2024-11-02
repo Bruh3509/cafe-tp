@@ -2,10 +2,12 @@ package com.pet.cafe.controller;
 
 import com.pet.cafe.dto.UserDTO;
 import com.pet.cafe.entity.User;
-import com.pet.cafe.service.UserService;
+import com.pet.cafe.service.impl.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -42,5 +44,19 @@ public class UserController {
     public ResponseEntity<Void> updateUser(String id, @RequestBody UserDTO userDTO){
         service.updateUser(id, userDTO);
         return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @GetMapping("/me")
+    public ResponseEntity<User> authenticatedUser(){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        User curUser = (User) authentication.getPrincipal();
+        return ResponseEntity.ok(curUser);
+    }
+
+    @GetMapping("/")
+    public ResponseEntity<List<User>> allUsers() {
+        List <User> users = service.allUsers();
+
+        return ResponseEntity.ok(users);
     }
 }

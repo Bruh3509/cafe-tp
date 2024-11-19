@@ -17,6 +17,7 @@ import java.util.List;
 @RequestMapping("/users")
 @RequiredArgsConstructor
 public class UserController {
+    //TODO UserDTO to User
     private final UserService service;
 
     @GetMapping(produces = "application/json")

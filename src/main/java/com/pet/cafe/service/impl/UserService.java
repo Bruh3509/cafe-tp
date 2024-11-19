@@ -42,11 +42,11 @@ public class UserService {
     public User create(User user) {
         if (repository.existsByUsername(user.getUsername())) {
             // Заменить на свои исключения
-            throw new RuntimeException("Пользователь с таким именем уже существует");
+            throw new IllegalArgumentException("Пользователь с таким именем уже существует");
         }
 
         if (repository.existsByEmail(user.getEmail())) {
-            throw new RuntimeException("Пользователь с таким email уже существует");
+            throw new IllegalArgumentException("Пользователь с таким email уже существует");
         }
 
         return repository.save(user);

@@ -19,9 +19,6 @@ import java.util.Set;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id")
-    long userId;
-
     @Column(name = "passport_id")
     String passportId;
 
@@ -40,16 +37,33 @@ public class User {
     @Column(name = "phone_number")
     String phoneNumber;
 
-    public User(long userId, String passportId, String email, String firstName, String secondName, String lastName, String phoneNumber) {
-        this.userId = userId;
+    @Column(name = "password")
+    String password;
+
+    @Column(name = "username")
+    String username;
+
+    public User(String passportId, String email, String firstName, String secondName, String lastName, String phoneNumber, String password, String username) {
         this.passportId = passportId;
         this.email = email;
         this.firstName = firstName;
         this.secondName = secondName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
+        this.password = password;
+        this.username = username;
     }
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user", orphanRemoval = true)
     Set<Booking> bookings = new HashSet<>();
+
+
+    @OneToMany(mappedBy = "user")
+    Set<SocketSession> sessions = new HashSet<>();
+
+//    @OneToMany(mappedBy = "sender", orphanRemoval = true)
+//    Set<Message> sentMessages = new HashSet<>();
+//
+//    @OneToMany(mappedBy = "recipient", orphanRemoval = true)
+//    Set<Message> receivedMessages = new HashSet<>();
 }

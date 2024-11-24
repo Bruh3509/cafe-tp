@@ -17,6 +17,6 @@ public class SocketSession {
     String sessionId;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "user_id")
+    @JoinColumn(name = "user_id", referencedColumnName = "passport_id")
     User user;
 }

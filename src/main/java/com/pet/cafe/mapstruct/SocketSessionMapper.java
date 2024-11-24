@@ -5,6 +5,7 @@ import com.pet.cafe.entity.SocketSession;
 import org.mapstruct.Mapper;
 
 import java.util.List;
+import java.util.Set;
 
 @Mapper(componentModel = "spring")
 public interface SocketSessionMapper {
@@ -13,4 +14,5 @@ public interface SocketSessionMapper {
     SocketSessionDTO entityToDto(SocketSession session);
 
     List<SocketSessionDTO> entitiesToDto(List<SocketSession> sessions);
+    Set<SocketSessionDTO> entitiesToDto(Set<SocketSession> sessions);
 }

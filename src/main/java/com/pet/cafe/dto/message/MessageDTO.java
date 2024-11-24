@@ -7,7 +7,11 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class FileMessage extends Message{
+public class MessageDTO {
+    private long messageId;
+    private String text;
+    private long senderId;
+    private long recipientId;
     private String fileType;
     private String fileName;
     private byte[] fileData;

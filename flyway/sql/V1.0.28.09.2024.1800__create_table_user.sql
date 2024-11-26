@@ -1,4 +1,4 @@
-create table User(
+create table Users(
     passport_id varchar(15) primary key,
     email varchar(255) not null,
     first_name varchar(100) not null,

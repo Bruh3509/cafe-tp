@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class AuthenticationService {
-    private final UserService userService;
+    private final UserServiceImpl userServiceImpl;
     private final UserRepository userRepository;
 
     private final PasswordEncoder passwordEncoder;
@@ -20,11 +20,11 @@ public class AuthenticationService {
     private final AuthenticationManager authenticationManager;
 
     public AuthenticationService(
-            UserService userService, UserRepository userRepository,
+            UserServiceImpl userServiceImpl, UserRepository userRepository,
             AuthenticationManager authenticationManager,
             PasswordEncoder passwordEncoder
     ) {
-        this.userService = userService;
+        this.userServiceImpl = userServiceImpl;
         this.authenticationManager = authenticationManager;
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
@@ -41,7 +41,7 @@ public class AuthenticationService {
         user.setPhoneNumber(input.getPhone_number());
         user.setSecondName(input.getSecondName());
 
-        return userRepository.save(userService.create(user));
+        return userRepository.save(userServiceImpl.create(user));
     }
 
     public User authenticate(LoginUserDTO input) {

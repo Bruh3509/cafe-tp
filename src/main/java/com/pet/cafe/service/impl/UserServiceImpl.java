@@ -5,6 +5,7 @@ import com.pet.cafe.entity.User;
 import com.pet.cafe.mapstruct.UserMapper;
 import com.pet.cafe.repository.UserRepository;
 
+import com.pet.cafe.service.UserService;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
@@ -21,7 +22,7 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 @FieldDefaults(makeFinal = true, level = AccessLevel.PRIVATE)
-public class UserService {
+public class UserServiceImpl implements UserService {
     private final UserRepository repository;
     UserMapper mapper;
 

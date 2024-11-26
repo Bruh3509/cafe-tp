@@ -1,21 +1,33 @@
-//package com.pet.cafe.service;
+package com.pet.cafe.service;
+
+import com.pet.cafe.dto.UserDTO;
+import com.pet.cafe.entity.User;
+import org.springframework.security.core.userdetails.UserDetailsService;
+
+import java.util.List;
+
+public interface UserService {
+    List<User> allUsers();
+    List<UserDTO> getUsers();
 //
-//import com.pet.cafe.dto.UserDTO;
-//import com.pet.cafe.entity.User;
-//
-//import java.util.List;
-//
-//public interface UserService {
-//    List<UserDTO> getUsers();
-//
-//    UserDTO getUser(String id);
-//    User save(User user);
-//
-//    void deleteUser(String id);
-//
-//    void updateUser(String id, UserDTO userDTO);
-//
-//    void createUser(String id, UserDTO userDTO);
-//
-//    User create(User user);
-//}
+//    @Deprecated
+//    public void getAdmin() {
+//        var user = getCurrentUser();
+//        user.setRole(Role.ROLE_ADMIN);
+//        repository.save(user);
+//    }
+
+    User create(User user);
+
+    UserDetailsService userDetailsService();
+    UserDTO getUser(String email);
+
+    void deleteUser(String email);
+    void updateUser(String email, UserDTO userDTO);
+
+    void createUser(String id, UserDTO request);
+
+    User getCurrentUser();
+
+    User getByUsername(String username);
+}

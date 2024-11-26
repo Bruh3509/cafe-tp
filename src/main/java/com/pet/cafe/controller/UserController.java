@@ -2,7 +2,7 @@ package com.pet.cafe.controller;
 
 import com.pet.cafe.dto.UserDTO;
 import com.pet.cafe.entity.User;
-import com.pet.cafe.service.impl.UserService;
+import com.pet.cafe.service.impl.UserServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +18,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UserController {
     //TODO UserDTO to User
-    private final UserService service;
+    private final UserServiceImpl service;
 
     @GetMapping(produces = "application/json")
     public ResponseEntity<List<UserDTO>> getUsers() {

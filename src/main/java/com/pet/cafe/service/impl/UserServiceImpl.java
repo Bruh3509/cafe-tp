@@ -1,5 +1,6 @@
 package com.pet.cafe.service.impl;
 
+import com.pet.cafe.dto.RegisterUserDTO;
 import com.pet.cafe.dto.UserDTO;
 import com.pet.cafe.entity.User;
 import com.pet.cafe.mapstruct.UserMapper;
@@ -10,6 +11,7 @@ import jakarta.persistence.EntityNotFoundException;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -26,9 +28,10 @@ public class UserServiceImpl implements UserService {
     private final UserRepository repository;
     UserMapper mapper;
 
-    public List<User> allUsers(){
+    public List<User> allUsers() {
         return new ArrayList<>(repository.findAll());
     }
+
     public List<UserDTO> getUsers() {
         return mapper.entitiesToDto(repository.findAll());
     }
@@ -42,15 +45,22 @@ public class UserServiceImpl implements UserService {
 
     public User create(User user) {
         if (repository.existsByUsername(user.getUsername())) {
-            // Заменить на свои исключения
             throw new IllegalArgumentException("Пользователь с таким именем уже существует");
         }
 
         if (repository.existsByEmail(user.getEmail())) {
             throw new IllegalArgumentException("Пользователь с таким email уже существует");
         }
-
+        user.setEmailVerificationToken(EmailVerificationServiceImpl.generateToken());
         return repository.save(user);
+    }
+
+
+    public void verifyEmail(String token) {
+        User user = repository.findByEmailVerificationToken(token).orElseThrow(() -> new IllegalArgumentException("Invalid token!"));
+        user.setEmailVerified(true);
+        user.setEmailVerificationToken(null);
+        repository.save(user);
     }
 
     public UserDetailsService userDetailsService() {

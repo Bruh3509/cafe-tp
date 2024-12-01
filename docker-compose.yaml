@@ -1,4 +1,4 @@
-services:
+docservices:
   mysql:
     image: mysql
     restart: always

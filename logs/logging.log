@@ -1,0 +1,52 @@
+2024-11-18 16:41:38 INFO  com.pet.cafe.CafeApplication - Starting CafeApplication using Java 21.0.1 with PID 2608 (C:\Users\vanbe\cafe-tp\target\classes started by vanbe in C:\Users\vanbe\cafe-tp)
+2024-11-18 16:41:38 DEBUG com.pet.cafe.CafeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-18 16:41:38 INFO  com.pet.cafe.CafeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-18 16:41:49 INFO  com.pet.cafe.CafeApplication - Started CafeApplication in 11.305 seconds (process running for 13.942)
+2024-11-18 16:43:17 INFO  com.pet.cafe.CafeApplication - Starting CafeApplication using Java 21.0.1 with PID 11456 (C:\Users\vanbe\cafe-tp\target\classes started by vanbe in C:\Users\vanbe\cafe-tp)
+2024-11-18 16:43:17 DEBUG com.pet.cafe.CafeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-18 16:43:17 INFO  com.pet.cafe.CafeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-18 16:43:26 INFO  com.pet.cafe.CafeApplication - Started CafeApplication in 9.936 seconds (process running for 10.639)
+2024-11-18 16:43:39 INFO  com.pet.cafe.CafeApplication - Starting CafeApplication using Java 21.0.1 with PID 16048 (C:\Users\vanbe\cafe-tp\target\classes started by vanbe in C:\Users\vanbe\cafe-tp)
+2024-11-18 16:43:39 DEBUG com.pet.cafe.CafeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-18 16:43:39 INFO  com.pet.cafe.CafeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-18 16:43:47 INFO  com.pet.cafe.CafeApplication - Started CafeApplication in 8.282 seconds (process running for 8.97)
+2024-11-18 16:54:38 INFO  com.pet.cafe.listener.ChatListener - Received a new web socket connection
+2024-11-18 16:54:38 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Starting deleteSession method with id bcd46ae4-657d-6292-fff9-d15b1b031931.
+2024-11-18 16:57:58 INFO  com.pet.cafe.listener.ChatListener - Received a new web socket connection
+2024-11-18 16:57:58 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Starting deleteSession method with id 7dfd143b-e44c-5cdb-3757-0c777712c941.
+2024-11-18 17:03:34 INFO  com.pet.cafe.listener.ChatListener - Received a new web socket connection
+2024-11-18 17:03:34 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Starting deleteSession method with id 5d0a36d8-7fca-f2c6-2e6d-2d767b3b0869.
+2024-11-18 17:03:42 INFO  com.pet.cafe.CafeApplication - Starting CafeApplication using Java 21.0.1 with PID 7828 (C:\Users\vanbe\cafe-tp\target\classes started by vanbe in C:\Users\vanbe\cafe-tp)
+2024-11-18 17:03:42 DEBUG com.pet.cafe.CafeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-18 17:03:42 INFO  com.pet.cafe.CafeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-18 17:03:51 INFO  com.pet.cafe.CafeApplication - Started CafeApplication in 9.567 seconds (process running for 10.566)
+2024-11-18 17:04:47 INFO  com.pet.cafe.listener.ChatListener - Received a new web socket connection
+2024-11-18 17:04:47 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Starting deleteSession method with id f442a693-1a30-7ec6-ea8b-751d637a12b7.
+2024-11-18 17:04:55 INFO  com.pet.cafe.CafeApplication - Starting CafeApplication using Java 21.0.1 with PID 18768 (C:\Users\vanbe\cafe-tp\target\classes started by vanbe in C:\Users\vanbe\cafe-tp)
+2024-11-18 17:04:55 DEBUG com.pet.cafe.CafeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-18 17:04:55 INFO  com.pet.cafe.CafeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-18 17:05:04 INFO  com.pet.cafe.CafeApplication - Started CafeApplication in 9.939 seconds (process running for 10.869)
+2024-11-19 16:08:17 INFO  com.pet.cafe.listener.ChatListener - Received a new web socket connection
+2024-11-19 16:08:17 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Starting deleteSession method with id 505d4bbe-5c27-ee52-6dcf-9d8776ce0151.
+2024-11-19 16:21:02 INFO  com.pet.cafe.CafeApplication - Starting CafeApplication using Java 21.0.1 with PID 12456 (C:\Users\vanbe\cafe-tp\target\classes started by vanbe in C:\Users\vanbe\cafe-tp)
+2024-11-19 16:21:02 DEBUG com.pet.cafe.CafeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-19 16:21:02 INFO  com.pet.cafe.CafeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-19 16:21:21 INFO  com.pet.cafe.CafeApplication - Started CafeApplication in 18.921 seconds (process running for 19.872)
+2024-11-19 16:22:22 INFO  com.pet.cafe.CafeApplication - Starting CafeApplication using Java 21.0.1 with PID 20608 (C:\Users\vanbe\cafe-tp\target\classes started by vanbe in C:\Users\vanbe\cafe-tp)
+2024-11-19 16:22:22 DEBUG com.pet.cafe.CafeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-19 16:22:22 INFO  com.pet.cafe.CafeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-19 16:22:37 INFO  com.pet.cafe.CafeApplication - Started CafeApplication in 15.493 seconds (process running for 16.223)
+2024-11-19 16:23:47 INFO  com.pet.cafe.listener.ChatListener - Received a new web socket connection
+2024-11-19 16:23:47 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Starting deleteSession method with id d5a6588f-ca4d-b940-b25c-d79de178247b.
+2024-11-19 16:26:39 INFO  com.pet.cafe.CafeApplication - Starting CafeApplication using Java 21.0.1 with PID 8640 (C:\Users\vanbe\cafe-tp\target\classes started by vanbe in C:\Users\vanbe\cafe-tp)
+2024-11-19 16:26:39 DEBUG com.pet.cafe.CafeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-19 16:26:39 INFO  com.pet.cafe.CafeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-19 16:26:57 INFO  com.pet.cafe.CafeApplication - Started CafeApplication in 18.025 seconds (process running for 18.958)
+2024-11-19 16:27:21 INFO  com.pet.cafe.listener.ChatListener - Received a new web socket connection
+2024-11-19 16:27:21 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Starting deleteSession method with id 7364d8fd-84a3-aae9-a06d-1ade756d6264.
+2024-11-25 17:21:05 INFO  com.pet.cafe.CafeApplication - Starting CafeApplication using Java 21.0.1 with PID 10324 (C:\Users\vanbe\cafe-tp\target\classes started by vanbe in C:\Users\vanbe\cafe-tp)
+2024-11-25 17:21:05 DEBUG com.pet.cafe.CafeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-25 17:21:05 INFO  com.pet.cafe.CafeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-25 17:21:13 INFO  com.pet.cafe.CafeApplication - Started CafeApplication in 8.485 seconds (process running for 9.367)
+2024-11-25 17:24:04 INFO  com.pet.cafe.listener.ChatListener - Received a new web socket connection
+2024-11-25 17:24:04 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Starting deleteSession method with id 88f588ce-eaef-f9d7-58dc-a099b16535cf.

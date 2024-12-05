@@ -24,7 +24,6 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "passport_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     String passportId;
 
     @Column(name = "email", unique = true, nullable = false)

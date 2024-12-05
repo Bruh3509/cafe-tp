@@ -75,7 +75,7 @@ public class UserServiceImpl implements UserService {
                 .findByEmail(email)
                 .orElseThrow(() -> new EntityNotFoundException("User not found!"));
       
-        log.info("Successfully retrieved user with id {}.", id);
+        log.info("Successfully retrieved user with id {}.");
         log.debug("Leaving getUser method.");
         return mapper.entityToDto(user);
     }
@@ -127,7 +127,6 @@ public void deleteUser(long id) {
                 });
 
         log.debug("Updating user fields with new values.");
-        user.setPassportId(userDTO.passportId());
         user.setFirstName(userDTO.firstName());
         user.setSecondName(userDTO.secondName());
         user.setLastName(userDTO.lastName());
@@ -220,7 +219,7 @@ public void deleteUser(long id) {
     }
   
     public void createUser(String id, UserDTO request) {
-        User user = mapper.dtoToEntity(request, id);
+        User user = mapper.dtoToEntity(request);
         repository.save(user);
     }
 

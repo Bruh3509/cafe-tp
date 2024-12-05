@@ -18,6 +18,10 @@ import java.util.List;
 
 public class Guest {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "guest_id")
+    long guestId;
+
     @Column(name = "phone_number")
     String phoneNumber;
 
@@ -30,7 +34,8 @@ public class Guest {
     @Column(name = "last_name")
     String lastName;
 
-    public Guest(String phoneNumber, String firstName, String secondName, String lastName) {
+    public Guest(long guestId, String phoneNumber, String firstName, String secondName, String lastName) {
+        this.guestId = guestId;
         this.phoneNumber = phoneNumber;
         this.firstName = firstName;
         this.secondName = secondName;

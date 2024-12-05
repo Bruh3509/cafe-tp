@@ -2,13 +2,20 @@ package com.pet.cafe.entity;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.experimental.FieldDefaults;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
-@Table(name = "Guests")
 @FieldDefaults(level = AccessLevel.PRIVATE)
+@NoArgsConstructor
+@Getter
+@Setter
 
 public class Booking {
     @Id
@@ -30,4 +37,14 @@ public class Booking {
     @JoinColumn(name = "room_number", referencedColumnName = "room_number")
     Room room;
 
+    public Booking(long bookingId, Date dateFrom, Date dateTo, User user, Room room) {
+        this.bookingId = bookingId;
+        this.dateFrom = dateFrom;
+        this.dateTo = dateTo;
+        this.user = user;
+        this.room = room;
+    }
+
+    @OneToMany(mappedBy = "booking")
+    private List<BookingGuest> bookingGuests = new ArrayList<>();
 }

@@ -1,4 +1,4 @@
-package com.pet.cafe.dao;
+package com.pet.cafe.repository;
 
 import com.pet.cafe.entity.BookingGuest;
 import com.pet.cafe.entity.BookingGuestPK;

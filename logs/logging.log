@@ -50,3 +50,48 @@
 2024-11-25 17:21:13 INFO  com.pet.cafe.CafeApplication - Started CafeApplication in 8.485 seconds (process running for 9.367)
 2024-11-25 17:24:04 INFO  com.pet.cafe.listener.ChatListener - Received a new web socket connection
 2024-11-25 17:24:04 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Starting deleteSession method with id 88f588ce-eaef-f9d7-58dc-a099b16535cf.
+2024-12-06 15:41:56 INFO  com.pet.cafe.CafeApplication - Starting CafeApplication using Java 21.0.1 with PID 18284 (C:\Users\Nikita\IdeaProjects\cafe-tp\target\classes started by Nikita in C:\Users\Nikita\IdeaProjects\cafe-tp)
+2024-12-06 15:41:56 DEBUG com.pet.cafe.CafeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-06 15:41:56 INFO  com.pet.cafe.CafeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-06 15:42:03 DEBUG c.p.c.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-12-06 15:42:05 INFO  com.pet.cafe.CafeApplication - Started CafeApplication in 9.83 seconds (process running for 10.917)
+2024-12-06 16:18:00 INFO  com.pet.cafe.CafeApplication - Starting CafeApplication using Java 21.0.1 with PID 1784 (C:\Users\Nikita\IdeaProjects\cafe-tp\target\classes started by Nikita in C:\Users\Nikita\IdeaProjects\cafe-tp)
+2024-12-06 16:18:00 DEBUG com.pet.cafe.CafeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-06 16:18:00 INFO  com.pet.cafe.CafeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-06 16:18:10 DEBUG c.p.c.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-12-06 16:18:12 INFO  com.pet.cafe.CafeApplication - Started CafeApplication in 12.293 seconds (process running for 15.876)
+2024-12-06 16:29:31 INFO  com.pet.cafe.CafeApplication - Starting CafeApplication using Java 21.0.1 with PID 18764 (C:\Users\Nikita\IdeaProjects\cafe-tp\target\classes started by Nikita in C:\Users\Nikita\IdeaProjects\cafe-tp)
+2024-12-06 16:29:31 DEBUG com.pet.cafe.CafeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-06 16:29:31 INFO  com.pet.cafe.CafeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-06 16:29:39 DEBUG c.p.c.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-12-06 16:29:40 INFO  com.pet.cafe.CafeApplication - Started CafeApplication in 9.896 seconds (process running for 11.339)
+2024-12-06 16:30:40 INFO  com.pet.cafe.CafeApplication - Starting CafeApplication using Java 21.0.1 with PID 18516 (C:\Users\Nikita\IdeaProjects\cafe-tp\target\classes started by Nikita in C:\Users\Nikita\IdeaProjects\cafe-tp)
+2024-12-06 16:30:40 DEBUG com.pet.cafe.CafeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-06 16:30:40 INFO  com.pet.cafe.CafeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-06 16:30:47 DEBUG c.p.c.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-12-06 16:30:48 INFO  com.pet.cafe.CafeApplication - Started CafeApplication in 9.593 seconds (process running for 10.875)
+2024-12-06 16:32:20 INFO  com.pet.cafe.CafeApplication - Starting CafeApplication using Java 21.0.1 with PID 27052 (C:\Users\Nikita\IdeaProjects\cafe-tp\target\classes started by Nikita in C:\Users\Nikita\IdeaProjects\cafe-tp)
+2024-12-06 16:32:20 DEBUG com.pet.cafe.CafeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-06 16:32:20 INFO  com.pet.cafe.CafeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-06 16:32:28 DEBUG c.p.c.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-12-06 16:32:30 INFO  com.pet.cafe.CafeApplication - Started CafeApplication in 10.683 seconds (process running for 12.809)
+2024-12-06 16:42:07 INFO  com.pet.cafe.CafeApplication - Starting CafeApplication using Java 21.0.1 with PID 864 (C:\Users\Nikita\IdeaProjects\cafe-tp\target\classes started by Nikita in C:\Users\Nikita\IdeaProjects\cafe-tp)
+2024-12-06 16:42:07 DEBUG com.pet.cafe.CafeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-06 16:42:07 INFO  com.pet.cafe.CafeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-06 16:42:13 DEBUG c.p.c.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-12-06 16:42:14 INFO  com.pet.cafe.CafeApplication - Started CafeApplication in 8.439 seconds (process running for 9.259)
+2024-12-06 16:43:10 INFO  com.pet.cafe.CafeApplication - Starting CafeApplication using Java 21.0.1 with PID 18584 (C:\Users\Nikita\IdeaProjects\cafe-tp\target\classes started by Nikita in C:\Users\Nikita\IdeaProjects\cafe-tp)
+2024-12-06 16:43:10 DEBUG com.pet.cafe.CafeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-06 16:43:10 INFO  com.pet.cafe.CafeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-06 16:43:17 DEBUG c.p.c.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-12-06 16:43:18 INFO  com.pet.cafe.CafeApplication - Started CafeApplication in 9.092 seconds (process running for 10.201)
+2024-12-06 16:44:55 INFO  com.pet.cafe.CafeApplication - Starting CafeApplication using Java 21.0.1 with PID 27244 (C:\Users\Nikita\IdeaProjects\cafe-tp\target\classes started by Nikita in C:\Users\Nikita\IdeaProjects\cafe-tp)
+2024-12-06 16:44:55 DEBUG com.pet.cafe.CafeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-06 16:44:55 INFO  com.pet.cafe.CafeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-06 16:45:02 DEBUG c.p.c.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-12-06 16:45:04 INFO  com.pet.cafe.CafeApplication - Started CafeApplication in 9.113 seconds (process running for 10.143)
+2024-12-06 16:55:00 INFO  com.pet.cafe.CafeApplication - Starting CafeApplication using Java 21.0.1 with PID 6240 (C:\Users\Nikita\IdeaProjects\cafe-tp\target\classes started by Nikita in C:\Users\Nikita\IdeaProjects\cafe-tp)
+2024-12-06 16:55:00 DEBUG com.pet.cafe.CafeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-06 16:55:00 INFO  com.pet.cafe.CafeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-06 16:55:08 DEBUG c.p.c.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-12-06 16:55:09 INFO  com.pet.cafe.CafeApplication - Started CafeApplication in 9.36 seconds (process running for 10.482)

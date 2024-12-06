@@ -42,6 +42,4 @@ public class RegisterUserDTO {
     @Schema(description = "Password", example = "my_1secret1_password")
     @Size(max = 30, message = "Password cannot contain more than 30 characters")
     private String password;
-
-
 }

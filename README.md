@@ -87,3 +87,6 @@ Below is the ER diagram for the database schema used in the Hotel Room Booking S
 - **GET** `/api/guests/{id}` - Retrieve a guest by ID
 - **PUT** `/api/guests/{id}` - Update a guest by ID
 - **DELETE** `/api/guests/{id}` - Delete a guest by ID
+
+## Swagger and OpenAPI Specification
+Provides OpenAPI Spec, you can easilly read it and understand app's API and moreover you can generate controller stubs by it in different programming languages.

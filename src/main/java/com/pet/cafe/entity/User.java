@@ -30,7 +30,7 @@ public class User implements UserDetails {
     String email;
 
     @Column(name = "password", nullable = false)
-    private String password;
+    String password;
 
     @Column(name = "first_name")
     String firstName;
@@ -45,6 +45,12 @@ public class User implements UserDetails {
 
     @Column(name = "phone_number")
     String phoneNumber;
+
+    @Column(name = "verified", nullable = false)
+    boolean emailVerified = false;
+  
+    @Column(name = "tokenEmail")
+    String emailVerificationToken;
 
     public User(String passportId, String email, String firstName, String secondName, String lastName, String phoneNumber, String password, String username) {
         this.passportId = passportId;

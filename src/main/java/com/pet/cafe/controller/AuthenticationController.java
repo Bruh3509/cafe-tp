@@ -4,8 +4,7 @@ import com.pet.cafe.dto.LoginResponseDTO;
 import com.pet.cafe.dto.LoginUserDTO;
 import com.pet.cafe.dto.RegisterUserDTO;
 import com.pet.cafe.entity.User;
-import com.pet.cafe.service.impl.AuthenticationService;
-import com.pet.cafe.service.impl.JwtService;
+import com.pet.cafe.service.impl.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,19 +15,23 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AuthenticationController {
     private final JwtService jwtService;
-
     private final AuthenticationService authenticationService;
-
-    public AuthenticationController(JwtService jwtService, AuthenticationService authenticationService) {
+    private final EmailService emailService;
+private final UserServiceImpl userService;
+    public AuthenticationController(JwtService jwtService, EmailVerificationServiceImpl emailVerificationService, AuthenticationService authenticationService, EmailService emailService, UserServiceImpl userService) {
         this.jwtService = jwtService;
         this.authenticationService = authenticationService;
+        this.emailService = emailService;
+        this.userService = userService;
     }
 
     @PostMapping("/signup")
-    public ResponseEntity<User> register(@RequestBody RegisterUserDTO registerUserDto) {
+    public ResponseEntity<String> register(@RequestBody RegisterUserDTO registerUserDto) {
         User registeredUser = authenticationService.signup(registerUserDto);
-
-        return ResponseEntity.ok(registeredUser);
+        String token = registeredUser.getEmailVerificationToken();
+        //TO-DO sending
+        emailService.sendVerificationEmail(registerUserDto.getEmail(), token);
+        return ResponseEntity.ok(/*registeredUser.toString() +*/ "User registered. Verify email!");
     }
 
     @PostMapping("/login")

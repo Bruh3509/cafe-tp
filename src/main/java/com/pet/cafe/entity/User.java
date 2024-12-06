@@ -22,8 +22,8 @@ import java.util.Set;
 
 public class User implements UserDetails {
     @Id
-    @Column(name = "passport_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "passport_id")
     String passportId;
 
     @Column(name = "email", unique = true, nullable = false)
@@ -48,8 +48,20 @@ public class User implements UserDetails {
 
     @Column(name = "verified", nullable = false)
     boolean emailVerified = false;
+  
     @Column(name = "tokenEmail")
     String emailVerificationToken;
+
+    public User(String passportId, String email, String firstName, String secondName, String lastName, String phoneNumber, String password, String username) {
+        this.passportId = passportId;
+        this.email = email;
+        this.firstName = firstName;
+        this.secondName = secondName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+        this.password = password;
+        this.username = username;
+    }
 //    @Enumerated(EnumType.STRING)
 //    @Column(name = "role", nullable = false)
 //    private Role role;
@@ -64,9 +76,17 @@ public class User implements UserDetails {
         this.username = username;
     }
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user", orphanRemoval = true)
     Set<Booking> bookings = new HashSet<>();
 
+    @OneToMany(mappedBy = "user")
+    Set<SocketSession> sessions = new HashSet<>();
+
+//    @OneToMany(mappedBy = "sender", orphanRemoval = true)
+//    Set<Message> sentMessages = new HashSet<>();
+//
+//    @OneToMany(mappedBy = "recipient", orphanRemoval = true)
+//    Set<Message> receivedMessages = new HashSet<>();
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
 //        return List.of(new SimpleGrantedAuthority(role.name()));

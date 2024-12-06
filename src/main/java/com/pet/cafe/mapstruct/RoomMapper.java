@@ -2,7 +2,6 @@ package com.pet.cafe.mapstruct;
 
 import com.pet.cafe.dto.RoomDTO;
 import com.pet.cafe.entity.Room;
-import org.mapstruct.Context;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

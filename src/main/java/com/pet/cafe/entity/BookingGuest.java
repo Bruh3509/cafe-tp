@@ -19,7 +19,7 @@ public class BookingGuest {
 
     @ManyToOne
     @MapsId("guest_id")
-    @JoinColumn(name = "guest_id", referencedColumnName = "phone_number")
+    @JoinColumn(name = "guest_id", referencedColumnName = "guest_id")
     Guest guest;
 
     @ManyToOne

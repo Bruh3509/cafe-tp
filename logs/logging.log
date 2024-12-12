@@ -95,3 +95,284 @@
 2024-12-06 16:55:00 INFO  com.pet.cafe.CafeApplication - No active profile set, falling back to 1 default profile: "default"
 2024-12-06 16:55:08 DEBUG c.p.c.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
 2024-12-06 16:55:09 INFO  com.pet.cafe.CafeApplication - Started CafeApplication in 9.36 seconds (process running for 10.482)
+2024-12-06 16:58:08 INFO  com.pet.cafe.CafeApplication - Starting CafeApplication using Java 21.0.1 with PID 21404 (C:\Users\Nikita\IdeaProjects\cafe-tp\target\classes started by Nikita in C:\Users\Nikita\IdeaProjects\cafe-tp)
+2024-12-06 16:58:08 DEBUG com.pet.cafe.CafeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-06 16:58:08 INFO  com.pet.cafe.CafeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-06 16:58:15 DEBUG c.p.c.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-12-06 16:58:16 INFO  com.pet.cafe.CafeApplication - Started CafeApplication in 9.221 seconds (process running for 10.507)
+2024-12-12 22:36:35 DEBUG c.p.c.service.impl.UserServiceImpl - Starting getUser method with id 1.
+2024-12-12 22:36:35 ERROR c.p.c.service.impl.UserServiceImpl - User with id 1 not found!
+2024-12-12 22:36:35 DEBUG c.p.c.service.impl.UserServiceImpl - Starting deleteUser method with id 1.
+2024-12-12 22:36:35 ERROR c.p.c.service.impl.UserServiceImpl - Attempt to delete user with non-existent id 1.
+2024-12-12 22:36:35 DEBUG c.p.c.service.impl.UserServiceImpl - Starting updateUser method with id 1.
+2024-12-12 22:36:35 ERROR c.p.c.service.impl.UserServiceImpl - Attempt to update user with non-existent id 1.
+2024-12-12 22:36:35 DEBUG c.p.c.service.impl.UserServiceImpl - Starting createUser method.
+2024-12-12 22:36:35 INFO  c.p.c.service.impl.UserServiceImpl - Successfully created user.
+2024-12-12 22:36:35 DEBUG c.p.c.service.impl.UserServiceImpl - Leaving createUser method.
+2024-12-12 22:36:35 DEBUG c.p.c.service.impl.UserServiceImpl - Starting deleteUser method with id 1.
+2024-12-12 22:36:35 INFO  c.p.c.service.impl.UserServiceImpl - Successfully removed user with id 1.
+2024-12-12 22:36:35 DEBUG c.p.c.service.impl.UserServiceImpl - Leaving deleteUser method.
+2024-12-12 22:36:35 DEBUG c.p.c.service.impl.UserServiceImpl - Starting getUsers method.
+2024-12-12 22:36:35 INFO  c.p.c.service.impl.UserServiceImpl - Successfully retrieved users.
+2024-12-12 22:36:35 DEBUG c.p.c.service.impl.UserServiceImpl - Leaving getUsers method.
+2024-12-12 22:36:35 DEBUG c.p.c.service.impl.UserServiceImpl - Starting getUser method with id 1.
+2024-12-12 22:36:35 INFO  c.p.c.service.impl.UserServiceImpl - Successfully retrieved user with id 1.
+2024-12-12 22:36:35 DEBUG c.p.c.service.impl.UserServiceImpl - Leaving getUser method.
+2024-12-12 22:36:35 DEBUG c.p.c.service.impl.UserServiceImpl - Starting updateUser method with id 1.
+2024-12-12 22:36:35 DEBUG c.p.c.service.impl.UserServiceImpl - Updating user fields with new values.
+2024-12-12 22:36:35 INFO  c.p.c.service.impl.UserServiceImpl - Successfully updated user with id 1.
+2024-12-12 22:36:35 DEBUG c.p.c.service.impl.UserServiceImpl - Leaving updateUser method.
+2024-12-12 22:36:51 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Starting getSession method with id 1.
+2024-12-12 22:36:51 ERROR c.p.c.s.i.SocketSessionServiceImpl - Session with id 1 not found!
+2024-12-12 22:36:51 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Starting deleteSession method with id 1.
+2024-12-12 22:36:51 ERROR c.p.c.s.i.SocketSessionServiceImpl - Attempt to delete session with non-existent id 1.
+2024-12-12 22:36:51 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Starting addSession method.
+2024-12-12 22:36:51 INFO  c.p.c.s.i.SocketSessionServiceImpl - Successfully created session with id null.
+2024-12-12 22:36:51 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Leaving addSession method.
+2024-12-12 22:36:51 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Starting deleteSession method with id 1.
+2024-12-12 22:36:51 INFO  c.p.c.s.i.SocketSessionServiceImpl - Successfully removed session with id 1.
+2024-12-12 22:36:51 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Leaving deleteSession method.
+2024-12-12 22:36:51 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Starting getSessions method.
+2024-12-12 22:36:51 INFO  c.p.c.s.i.SocketSessionServiceImpl - Successfully retrieved sessions.
+2024-12-12 22:36:51 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Leaving getSessions method.
+2024-12-12 22:36:51 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Starting getSession method with id 1.
+2024-12-12 22:36:51 INFO  c.p.c.s.i.SocketSessionServiceImpl - Successfully retrieved session with id 1.
+2024-12-12 22:36:51 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Leaving getSession method.
+2024-12-12 22:37:01 DEBUG c.p.c.s.impl.BookingServiceImpl - Starting getBooking method with id 1.
+2024-12-12 22:37:01 ERROR c.p.c.s.impl.BookingServiceImpl - Booking with id 1 not found!
+2024-12-12 22:37:01 DEBUG c.p.c.s.impl.BookingServiceImpl - Starting deleteBooking method with id 1.
+2024-12-12 22:37:01 ERROR c.p.c.s.impl.BookingServiceImpl - Attempt to delete booking with non-existent id 1.
+2024-12-12 22:37:01 DEBUG c.p.c.s.impl.BookingServiceImpl - Starting updateBooking method with id 1.
+2024-12-12 22:37:01 ERROR c.p.c.s.impl.BookingServiceImpl - Attempt to update booking with non-existent id 1.
+2024-12-12 22:37:02 DEBUG c.p.c.s.impl.BookingServiceImpl - Starting addBooking method.
+2024-12-12 22:37:02 INFO  c.p.c.s.impl.BookingServiceImpl - Successfully created booking.
+2024-12-12 22:37:02 DEBUG c.p.c.s.impl.BookingServiceImpl - Leaving addBooking method.
+2024-12-12 22:37:02 DEBUG c.p.c.s.impl.BookingServiceImpl - Starting deleteBooking method with id 1.
+2024-12-12 22:37:02 INFO  c.p.c.s.impl.BookingServiceImpl - Successfully removed booking with id 1.
+2024-12-12 22:37:02 DEBUG c.p.c.s.impl.BookingServiceImpl - Leaving deleteBooking method.
+2024-12-12 22:37:02 DEBUG c.p.c.s.impl.BookingServiceImpl - Starting getBookings method.
+2024-12-12 22:37:02 INFO  c.p.c.s.impl.BookingServiceImpl - Successfully retrieved bookings.
+2024-12-12 22:37:02 DEBUG c.p.c.s.impl.BookingServiceImpl - Leaving getBookings method.
+2024-12-12 22:37:02 DEBUG c.p.c.s.impl.BookingServiceImpl - Starting getBooking method with id 1.
+2024-12-12 22:37:02 INFO  c.p.c.s.impl.BookingServiceImpl - Successfully retrieved booking with id 1.
+2024-12-12 22:37:02 DEBUG c.p.c.s.impl.BookingServiceImpl - Leaving getBooking method.
+2024-12-12 22:37:02 DEBUG c.p.c.s.impl.BookingServiceImpl - Starting updateBooking method with id 1.
+2024-12-12 22:37:02 DEBUG c.p.c.s.impl.BookingServiceImpl - Updating booking fields with new values.
+2024-12-12 22:37:02 INFO  c.p.c.s.impl.BookingServiceImpl - Successfully updated booking with id 1.
+2024-12-12 22:37:02 DEBUG c.p.c.s.impl.BookingServiceImpl - Leaving updateBooking method.
+2024-12-12 23:06:05 INFO  com.pet.cafe.CafeApplicationTests - Starting CafeApplicationTests using Java 21.0.2 with PID 4800 (started by Nikita in C:\Users\Nikita\IdeaProjects\cafe-tp)
+2024-12-12 23:06:05 DEBUG com.pet.cafe.CafeApplicationTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-12 23:06:05 INFO  com.pet.cafe.CafeApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-12 23:06:17 INFO  com.pet.cafe.CafeApplicationTests - Started CafeApplicationTests in 13.484 seconds (process running for 16.964)
+2024-12-12 23:06:19 DEBUG c.p.c.s.impl.BookingServiceImpl - Starting getBooking method with id 1.
+2024-12-12 23:06:19 ERROR c.p.c.s.impl.BookingServiceImpl - Booking with id 1 not found!
+2024-12-12 23:06:19 DEBUG c.p.c.s.impl.BookingServiceImpl - Starting deleteBooking method with id 1.
+2024-12-12 23:06:19 ERROR c.p.c.s.impl.BookingServiceImpl - Attempt to delete booking with non-existent id 1.
+2024-12-12 23:06:19 DEBUG c.p.c.s.impl.BookingServiceImpl - Starting updateBooking method with id 1.
+2024-12-12 23:06:19 ERROR c.p.c.s.impl.BookingServiceImpl - Attempt to update booking with non-existent id 1.
+2024-12-12 23:06:19 DEBUG c.p.c.s.impl.BookingServiceImpl - Starting addBooking method.
+2024-12-12 23:06:19 INFO  c.p.c.s.impl.BookingServiceImpl - Successfully created booking.
+2024-12-12 23:06:19 DEBUG c.p.c.s.impl.BookingServiceImpl - Leaving addBooking method.
+2024-12-12 23:06:19 DEBUG c.p.c.s.impl.BookingServiceImpl - Starting deleteBooking method with id 1.
+2024-12-12 23:06:19 INFO  c.p.c.s.impl.BookingServiceImpl - Successfully removed booking with id 1.
+2024-12-12 23:06:19 DEBUG c.p.c.s.impl.BookingServiceImpl - Leaving deleteBooking method.
+2024-12-12 23:06:19 DEBUG c.p.c.s.impl.BookingServiceImpl - Starting getBookings method.
+2024-12-12 23:06:19 INFO  c.p.c.s.impl.BookingServiceImpl - Successfully retrieved bookings.
+2024-12-12 23:06:19 DEBUG c.p.c.s.impl.BookingServiceImpl - Leaving getBookings method.
+2024-12-12 23:06:19 DEBUG c.p.c.s.impl.BookingServiceImpl - Starting getBooking method with id 1.
+2024-12-12 23:06:19 INFO  c.p.c.s.impl.BookingServiceImpl - Successfully retrieved booking with id 1.
+2024-12-12 23:06:19 DEBUG c.p.c.s.impl.BookingServiceImpl - Leaving getBooking method.
+2024-12-12 23:06:19 DEBUG c.p.c.s.impl.BookingServiceImpl - Starting updateBooking method with id 1.
+2024-12-12 23:06:19 DEBUG c.p.c.s.impl.BookingServiceImpl - Updating booking fields with new values.
+2024-12-12 23:06:19 INFO  c.p.c.s.impl.BookingServiceImpl - Successfully updated booking with id 1.
+2024-12-12 23:06:19 DEBUG c.p.c.s.impl.BookingServiceImpl - Leaving updateBooking method.
+2024-12-12 23:06:20 DEBUG c.p.c.service.impl.GuestServiceImpl - Starting getGuest method with id 1.
+2024-12-12 23:06:20 ERROR c.p.c.service.impl.GuestServiceImpl - Guest with id 1 not found!
+2024-12-12 23:06:20 DEBUG c.p.c.service.impl.GuestServiceImpl - Starting deleteGuest method with id 1.
+2024-12-12 23:06:20 ERROR c.p.c.service.impl.GuestServiceImpl - Attempt to delete guest with non-existent id 1.
+2024-12-12 23:06:20 DEBUG c.p.c.service.impl.GuestServiceImpl - Starting updateGuest method with id 1.
+2024-12-12 23:06:20 ERROR c.p.c.service.impl.GuestServiceImpl - Attempt to update guest with non-existent id 1.
+2024-12-12 23:06:20 DEBUG c.p.c.service.impl.GuestServiceImpl - Starting addGuest method.
+2024-12-12 23:06:20 INFO  c.p.c.service.impl.GuestServiceImpl - Successfully created guest.
+2024-12-12 23:06:20 DEBUG c.p.c.service.impl.GuestServiceImpl - Leaving addGuest method.
+2024-12-12 23:06:20 DEBUG c.p.c.service.impl.GuestServiceImpl - Starting deleteGuest method with id 1.
+2024-12-12 23:06:20 INFO  c.p.c.service.impl.GuestServiceImpl - Successfully removed guest with id 1.
+2024-12-12 23:06:20 DEBUG c.p.c.service.impl.GuestServiceImpl - Leaving deleteGuest method.
+2024-12-12 23:06:20 DEBUG c.p.c.service.impl.GuestServiceImpl - Starting getGuests method.
+2024-12-12 23:06:20 INFO  c.p.c.service.impl.GuestServiceImpl - Successfully retrieved guests.
+2024-12-12 23:06:20 DEBUG c.p.c.service.impl.GuestServiceImpl - Leaving getGuests method.
+2024-12-12 23:06:20 DEBUG c.p.c.service.impl.GuestServiceImpl - Starting getGuest method with id 1.
+2024-12-12 23:06:20 INFO  c.p.c.service.impl.GuestServiceImpl - Successfully retrieved guest with id 1.
+2024-12-12 23:06:20 DEBUG c.p.c.service.impl.GuestServiceImpl - Leaving getGuest method.
+2024-12-12 23:06:20 DEBUG c.p.c.service.impl.GuestServiceImpl - Starting updateGuest method with id 1.
+2024-12-12 23:06:20 DEBUG c.p.c.service.impl.GuestServiceImpl - Updating guest fields with new values.
+2024-12-12 23:06:20 INFO  c.p.c.service.impl.GuestServiceImpl - Successfully updated guest with id 1.
+2024-12-12 23:06:20 DEBUG c.p.c.service.impl.GuestServiceImpl - Leaving updateGuest method.
+2024-12-12 23:06:20 DEBUG c.p.c.service.impl.RoomServiceImpl - Starting getRoom method with id 1.
+2024-12-12 23:06:20 ERROR c.p.c.service.impl.RoomServiceImpl - Room with id 1 not found!
+2024-12-12 23:06:20 DEBUG c.p.c.service.impl.RoomServiceImpl - Starting deleteRoom method with id 1.
+2024-12-12 23:06:20 ERROR c.p.c.service.impl.RoomServiceImpl - Attempt to delete room with non-existent id 1.
+2024-12-12 23:06:20 DEBUG c.p.c.service.impl.RoomServiceImpl - Starting updateRoom method with id 1.
+2024-12-12 23:06:20 ERROR c.p.c.service.impl.RoomServiceImpl - Attempt to update room with non-existent id 1.
+2024-12-12 23:06:20 DEBUG c.p.c.service.impl.RoomServiceImpl - Starting addRoom method.
+2024-12-12 23:06:20 INFO  c.p.c.service.impl.RoomServiceImpl - Successfully created room with id 1.
+2024-12-12 23:06:20 DEBUG c.p.c.service.impl.RoomServiceImpl - Leaving addRoom method.
+2024-12-12 23:06:20 DEBUG c.p.c.service.impl.RoomServiceImpl - Starting deleteRoom method with id 1.
+2024-12-12 23:06:20 INFO  c.p.c.service.impl.RoomServiceImpl - Successfully removed room with id 1.
+2024-12-12 23:06:20 DEBUG c.p.c.service.impl.RoomServiceImpl - Leaving deleteRoom method.
+2024-12-12 23:06:20 DEBUG c.p.c.service.impl.RoomServiceImpl - Starting getRooms method.
+2024-12-12 23:06:20 INFO  c.p.c.service.impl.RoomServiceImpl - Successfully retrieved rooms.
+2024-12-12 23:06:20 DEBUG c.p.c.service.impl.RoomServiceImpl - Leaving getRooms method.
+2024-12-12 23:06:20 DEBUG c.p.c.service.impl.RoomServiceImpl - Starting getRoom method with id 1.
+2024-12-12 23:06:20 INFO  c.p.c.service.impl.RoomServiceImpl - Successfully retrieved room with id 1.
+2024-12-12 23:06:20 DEBUG c.p.c.service.impl.RoomServiceImpl - Leaving getRoom method.
+2024-12-12 23:06:20 DEBUG c.p.c.service.impl.RoomServiceImpl - Starting updateRoom method with id 1.
+2024-12-12 23:06:20 DEBUG c.p.c.service.impl.RoomServiceImpl - Updating room fields with new values.
+2024-12-12 23:06:20 INFO  c.p.c.service.impl.RoomServiceImpl - Successfully updated room with id 1.
+2024-12-12 23:06:20 DEBUG c.p.c.service.impl.RoomServiceImpl - Leaving updateRoom method.
+2024-12-12 23:06:20 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Starting getSession method with id 1.
+2024-12-12 23:06:20 ERROR c.p.c.s.i.SocketSessionServiceImpl - Session with id 1 not found!
+2024-12-12 23:06:20 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Starting deleteSession method with id 1.
+2024-12-12 23:06:20 ERROR c.p.c.s.i.SocketSessionServiceImpl - Attempt to delete session with non-existent id 1.
+2024-12-12 23:06:20 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Starting addSession method.
+2024-12-12 23:06:20 INFO  c.p.c.s.i.SocketSessionServiceImpl - Successfully created session with id null.
+2024-12-12 23:06:20 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Leaving addSession method.
+2024-12-12 23:06:20 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Starting deleteSession method with id 1.
+2024-12-12 23:06:20 INFO  c.p.c.s.i.SocketSessionServiceImpl - Successfully removed session with id 1.
+2024-12-12 23:06:20 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Leaving deleteSession method.
+2024-12-12 23:06:20 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Starting getSessions method.
+2024-12-12 23:06:20 INFO  c.p.c.s.i.SocketSessionServiceImpl - Successfully retrieved sessions.
+2024-12-12 23:06:20 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Leaving getSessions method.
+2024-12-12 23:06:20 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Starting getSession method with id 1.
+2024-12-12 23:06:20 INFO  c.p.c.s.i.SocketSessionServiceImpl - Successfully retrieved session with id 1.
+2024-12-12 23:06:20 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Leaving getSession method.
+2024-12-12 23:06:21 DEBUG c.p.c.service.impl.UserServiceImpl - Starting getUser method with id 1.
+2024-12-12 23:06:21 ERROR c.p.c.service.impl.UserServiceImpl - User with id 1 not found!
+2024-12-12 23:06:21 DEBUG c.p.c.service.impl.UserServiceImpl - Starting deleteUser method with id 1.
+2024-12-12 23:06:21 ERROR c.p.c.service.impl.UserServiceImpl - Attempt to delete user with non-existent id 1.
+2024-12-12 23:06:21 DEBUG c.p.c.service.impl.UserServiceImpl - Starting updateUser method with id 1.
+2024-12-12 23:06:21 ERROR c.p.c.service.impl.UserServiceImpl - Attempt to update user with non-existent id 1.
+2024-12-12 23:06:21 DEBUG c.p.c.service.impl.UserServiceImpl - Starting createUser method.
+2024-12-12 23:06:21 INFO  c.p.c.service.impl.UserServiceImpl - Successfully created user.
+2024-12-12 23:06:21 DEBUG c.p.c.service.impl.UserServiceImpl - Leaving createUser method.
+2024-12-12 23:06:21 DEBUG c.p.c.service.impl.UserServiceImpl - Starting deleteUser method with id 1.
+2024-12-12 23:06:21 INFO  c.p.c.service.impl.UserServiceImpl - Successfully removed user with id 1.
+2024-12-12 23:06:21 DEBUG c.p.c.service.impl.UserServiceImpl - Leaving deleteUser method.
+2024-12-12 23:06:21 DEBUG c.p.c.service.impl.UserServiceImpl - Starting getUsers method.
+2024-12-12 23:06:21 INFO  c.p.c.service.impl.UserServiceImpl - Successfully retrieved users.
+2024-12-12 23:06:21 DEBUG c.p.c.service.impl.UserServiceImpl - Leaving getUsers method.
+2024-12-12 23:06:21 DEBUG c.p.c.service.impl.UserServiceImpl - Starting getUser method with id 1.
+2024-12-12 23:06:21 INFO  c.p.c.service.impl.UserServiceImpl - Successfully retrieved user with id 1.
+2024-12-12 23:06:21 DEBUG c.p.c.service.impl.UserServiceImpl - Leaving getUser method.
+2024-12-12 23:06:21 DEBUG c.p.c.service.impl.UserServiceImpl - Starting updateUser method with id 1.
+2024-12-12 23:06:21 DEBUG c.p.c.service.impl.UserServiceImpl - Updating user fields with new values.
+2024-12-12 23:06:21 INFO  c.p.c.service.impl.UserServiceImpl - Successfully updated user with id 1.
+2024-12-12 23:06:21 DEBUG c.p.c.service.impl.UserServiceImpl - Leaving updateUser method.
+2024-12-12 23:08:09 INFO  com.pet.cafe.CafeApplicationTests - Starting CafeApplicationTests using Java 21.0.2 with PID 10168 (started by Nikita in C:\Users\Nikita\IdeaProjects\cafe-tp)
+2024-12-12 23:08:09 DEBUG com.pet.cafe.CafeApplicationTests - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-12 23:08:09 INFO  com.pet.cafe.CafeApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-12-12 23:08:18 INFO  com.pet.cafe.CafeApplicationTests - Started CafeApplicationTests in 9.367 seconds (process running for 11.557)
+2024-12-12 23:08:19 DEBUG c.p.c.s.impl.BookingServiceImpl - Starting getBooking method with id 1.
+2024-12-12 23:08:19 ERROR c.p.c.s.impl.BookingServiceImpl - Booking with id 1 not found!
+2024-12-12 23:08:19 DEBUG c.p.c.s.impl.BookingServiceImpl - Starting deleteBooking method with id 1.
+2024-12-12 23:08:19 ERROR c.p.c.s.impl.BookingServiceImpl - Attempt to delete booking with non-existent id 1.
+2024-12-12 23:08:19 DEBUG c.p.c.s.impl.BookingServiceImpl - Starting updateBooking method with id 1.
+2024-12-12 23:08:19 ERROR c.p.c.s.impl.BookingServiceImpl - Attempt to update booking with non-existent id 1.
+2024-12-12 23:08:19 DEBUG c.p.c.s.impl.BookingServiceImpl - Starting addBooking method.
+2024-12-12 23:08:19 INFO  c.p.c.s.impl.BookingServiceImpl - Successfully created booking.
+2024-12-12 23:08:19 DEBUG c.p.c.s.impl.BookingServiceImpl - Leaving addBooking method.
+2024-12-12 23:08:19 DEBUG c.p.c.s.impl.BookingServiceImpl - Starting deleteBooking method with id 1.
+2024-12-12 23:08:19 INFO  c.p.c.s.impl.BookingServiceImpl - Successfully removed booking with id 1.
+2024-12-12 23:08:19 DEBUG c.p.c.s.impl.BookingServiceImpl - Leaving deleteBooking method.
+2024-12-12 23:08:20 DEBUG c.p.c.s.impl.BookingServiceImpl - Starting getBookings method.
+2024-12-12 23:08:20 INFO  c.p.c.s.impl.BookingServiceImpl - Successfully retrieved bookings.
+2024-12-12 23:08:20 DEBUG c.p.c.s.impl.BookingServiceImpl - Leaving getBookings method.
+2024-12-12 23:08:20 DEBUG c.p.c.s.impl.BookingServiceImpl - Starting getBooking method with id 1.
+2024-12-12 23:08:20 INFO  c.p.c.s.impl.BookingServiceImpl - Successfully retrieved booking with id 1.
+2024-12-12 23:08:20 DEBUG c.p.c.s.impl.BookingServiceImpl - Leaving getBooking method.
+2024-12-12 23:08:20 DEBUG c.p.c.s.impl.BookingServiceImpl - Starting updateBooking method with id 1.
+2024-12-12 23:08:20 DEBUG c.p.c.s.impl.BookingServiceImpl - Updating booking fields with new values.
+2024-12-12 23:08:20 INFO  c.p.c.s.impl.BookingServiceImpl - Successfully updated booking with id 1.
+2024-12-12 23:08:20 DEBUG c.p.c.s.impl.BookingServiceImpl - Leaving updateBooking method.
+2024-12-12 23:08:20 DEBUG c.p.c.service.impl.GuestServiceImpl - Starting getGuest method with id 1.
+2024-12-12 23:08:20 ERROR c.p.c.service.impl.GuestServiceImpl - Guest with id 1 not found!
+2024-12-12 23:08:20 DEBUG c.p.c.service.impl.GuestServiceImpl - Starting deleteGuest method with id 1.
+2024-12-12 23:08:20 ERROR c.p.c.service.impl.GuestServiceImpl - Attempt to delete guest with non-existent id 1.
+2024-12-12 23:08:20 DEBUG c.p.c.service.impl.GuestServiceImpl - Starting updateGuest method with id 1.
+2024-12-12 23:08:20 ERROR c.p.c.service.impl.GuestServiceImpl - Attempt to update guest with non-existent id 1.
+2024-12-12 23:08:20 DEBUG c.p.c.service.impl.GuestServiceImpl - Starting addGuest method.
+2024-12-12 23:08:20 INFO  c.p.c.service.impl.GuestServiceImpl - Successfully created guest.
+2024-12-12 23:08:20 DEBUG c.p.c.service.impl.GuestServiceImpl - Leaving addGuest method.
+2024-12-12 23:08:20 DEBUG c.p.c.service.impl.GuestServiceImpl - Starting deleteGuest method with id 1.
+2024-12-12 23:08:20 INFO  c.p.c.service.impl.GuestServiceImpl - Successfully removed guest with id 1.
+2024-12-12 23:08:20 DEBUG c.p.c.service.impl.GuestServiceImpl - Leaving deleteGuest method.
+2024-12-12 23:08:20 DEBUG c.p.c.service.impl.GuestServiceImpl - Starting getGuests method.
+2024-12-12 23:08:20 INFO  c.p.c.service.impl.GuestServiceImpl - Successfully retrieved guests.
+2024-12-12 23:08:20 DEBUG c.p.c.service.impl.GuestServiceImpl - Leaving getGuests method.
+2024-12-12 23:08:20 DEBUG c.p.c.service.impl.GuestServiceImpl - Starting getGuest method with id 1.
+2024-12-12 23:08:20 INFO  c.p.c.service.impl.GuestServiceImpl - Successfully retrieved guest with id 1.
+2024-12-12 23:08:20 DEBUG c.p.c.service.impl.GuestServiceImpl - Leaving getGuest method.
+2024-12-12 23:08:20 DEBUG c.p.c.service.impl.GuestServiceImpl - Starting updateGuest method with id 1.
+2024-12-12 23:08:20 DEBUG c.p.c.service.impl.GuestServiceImpl - Updating guest fields with new values.
+2024-12-12 23:08:20 INFO  c.p.c.service.impl.GuestServiceImpl - Successfully updated guest with id 1.
+2024-12-12 23:08:20 DEBUG c.p.c.service.impl.GuestServiceImpl - Leaving updateGuest method.
+2024-12-12 23:08:20 DEBUG c.p.c.service.impl.RoomServiceImpl - Starting getRoom method with id 1.
+2024-12-12 23:08:20 ERROR c.p.c.service.impl.RoomServiceImpl - Room with id 1 not found!
+2024-12-12 23:08:20 DEBUG c.p.c.service.impl.RoomServiceImpl - Starting deleteRoom method with id 1.
+2024-12-12 23:08:20 ERROR c.p.c.service.impl.RoomServiceImpl - Attempt to delete room with non-existent id 1.
+2024-12-12 23:08:20 DEBUG c.p.c.service.impl.RoomServiceImpl - Starting updateRoom method with id 1.
+2024-12-12 23:08:20 ERROR c.p.c.service.impl.RoomServiceImpl - Attempt to update room with non-existent id 1.
+2024-12-12 23:08:20 DEBUG c.p.c.service.impl.RoomServiceImpl - Starting addRoom method.
+2024-12-12 23:08:20 INFO  c.p.c.service.impl.RoomServiceImpl - Successfully created room with id 1.
+2024-12-12 23:08:20 DEBUG c.p.c.service.impl.RoomServiceImpl - Leaving addRoom method.
+2024-12-12 23:08:20 DEBUG c.p.c.service.impl.RoomServiceImpl - Starting deleteRoom method with id 1.
+2024-12-12 23:08:20 INFO  c.p.c.service.impl.RoomServiceImpl - Successfully removed room with id 1.
+2024-12-12 23:08:20 DEBUG c.p.c.service.impl.RoomServiceImpl - Leaving deleteRoom method.
+2024-12-12 23:08:20 DEBUG c.p.c.service.impl.RoomServiceImpl - Starting getRooms method.
+2024-12-12 23:08:20 INFO  c.p.c.service.impl.RoomServiceImpl - Successfully retrieved rooms.
+2024-12-12 23:08:20 DEBUG c.p.c.service.impl.RoomServiceImpl - Leaving getRooms method.
+2024-12-12 23:08:20 DEBUG c.p.c.service.impl.RoomServiceImpl - Starting getRoom method with id 1.
+2024-12-12 23:08:20 INFO  c.p.c.service.impl.RoomServiceImpl - Successfully retrieved room with id 1.
+2024-12-12 23:08:20 DEBUG c.p.c.service.impl.RoomServiceImpl - Leaving getRoom method.
+2024-12-12 23:08:20 DEBUG c.p.c.service.impl.RoomServiceImpl - Starting updateRoom method with id 1.
+2024-12-12 23:08:20 DEBUG c.p.c.service.impl.RoomServiceImpl - Updating room fields with new values.
+2024-12-12 23:08:20 INFO  c.p.c.service.impl.RoomServiceImpl - Successfully updated room with id 1.
+2024-12-12 23:08:20 DEBUG c.p.c.service.impl.RoomServiceImpl - Leaving updateRoom method.
+2024-12-12 23:08:20 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Starting getSession method with id 1.
+2024-12-12 23:08:20 ERROR c.p.c.s.i.SocketSessionServiceImpl - Session with id 1 not found!
+2024-12-12 23:08:20 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Starting deleteSession method with id 1.
+2024-12-12 23:08:20 ERROR c.p.c.s.i.SocketSessionServiceImpl - Attempt to delete session with non-existent id 1.
+2024-12-12 23:08:20 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Starting addSession method.
+2024-12-12 23:08:20 INFO  c.p.c.s.i.SocketSessionServiceImpl - Successfully created session with id null.
+2024-12-12 23:08:20 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Leaving addSession method.
+2024-12-12 23:08:20 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Starting deleteSession method with id 1.
+2024-12-12 23:08:20 INFO  c.p.c.s.i.SocketSessionServiceImpl - Successfully removed session with id 1.
+2024-12-12 23:08:20 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Leaving deleteSession method.
+2024-12-12 23:08:20 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Starting getSessions method.
+2024-12-12 23:08:20 INFO  c.p.c.s.i.SocketSessionServiceImpl - Successfully retrieved sessions.
+2024-12-12 23:08:20 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Leaving getSessions method.
+2024-12-12 23:08:20 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Starting getSession method with id 1.
+2024-12-12 23:08:20 INFO  c.p.c.s.i.SocketSessionServiceImpl - Successfully retrieved session with id 1.
+2024-12-12 23:08:20 DEBUG c.p.c.s.i.SocketSessionServiceImpl - Leaving getSession method.
+2024-12-12 23:08:21 DEBUG c.p.c.service.impl.UserServiceImpl - Starting getUser method with id 1.
+2024-12-12 23:08:21 ERROR c.p.c.service.impl.UserServiceImpl - User with id 1 not found!
+2024-12-12 23:08:21 DEBUG c.p.c.service.impl.UserServiceImpl - Starting deleteUser method with id 1.
+2024-12-12 23:08:21 ERROR c.p.c.service.impl.UserServiceImpl - Attempt to delete user with non-existent id 1.
+2024-12-12 23:08:21 DEBUG c.p.c.service.impl.UserServiceImpl - Starting updateUser method with id 1.
+2024-12-12 23:08:21 ERROR c.p.c.service.impl.UserServiceImpl - Attempt to update user with non-existent id 1.
+2024-12-12 23:08:21 DEBUG c.p.c.service.impl.UserServiceImpl - Starting createUser method.
+2024-12-12 23:08:21 INFO  c.p.c.service.impl.UserServiceImpl - Successfully created user.
+2024-12-12 23:08:21 DEBUG c.p.c.service.impl.UserServiceImpl - Leaving createUser method.
+2024-12-12 23:08:21 DEBUG c.p.c.service.impl.UserServiceImpl - Starting deleteUser method with id 1.
+2024-12-12 23:08:21 INFO  c.p.c.service.impl.UserServiceImpl - Successfully removed user with id 1.
+2024-12-12 23:08:21 DEBUG c.p.c.service.impl.UserServiceImpl - Leaving deleteUser method.
+2024-12-12 23:08:21 DEBUG c.p.c.service.impl.UserServiceImpl - Starting getUsers method.
+2024-12-12 23:08:21 INFO  c.p.c.service.impl.UserServiceImpl - Successfully retrieved users.
+2024-12-12 23:08:21 DEBUG c.p.c.service.impl.UserServiceImpl - Leaving getUsers method.
+2024-12-12 23:08:21 DEBUG c.p.c.service.impl.UserServiceImpl - Starting getUser method with id 1.
+2024-12-12 23:08:21 INFO  c.p.c.service.impl.UserServiceImpl - Successfully retrieved user with id 1.
+2024-12-12 23:08:21 DEBUG c.p.c.service.impl.UserServiceImpl - Leaving getUser method.
+2024-12-12 23:08:21 DEBUG c.p.c.service.impl.UserServiceImpl - Starting updateUser method with id 1.
+2024-12-12 23:08:21 DEBUG c.p.c.service.impl.UserServiceImpl - Updating user fields with new values.
+2024-12-12 23:08:21 INFO  c.p.c.service.impl.UserServiceImpl - Successfully updated user with id 1.
+2024-12-12 23:08:21 DEBUG c.p.c.service.impl.UserServiceImpl - Leaving updateUser method.

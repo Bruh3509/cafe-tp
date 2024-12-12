@@ -117,7 +117,7 @@ class UserServiceTests {
     }
 
     private User getUser(long id){
-        return new User(id,
+        return new User(String.valueOf(id),
                 "passportId",
                 "email",
                 "firstname",
@@ -127,7 +127,7 @@ class UserServiceTests {
     }
 
     private UserDTO getUserDto(){
-        return new UserDTO("passportId",
+        return new UserDTO("email", "passportId",
                 "email",
                 "firstname",
                 "secondname",

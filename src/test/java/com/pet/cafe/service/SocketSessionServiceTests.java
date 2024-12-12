@@ -116,7 +116,7 @@ class SocketSessionServiceTests {
     }
 
     private SocketSession getSocketSession(String id){
-        User user = new User(1,
+        User user = new User("1",
                 "passportId",
                 "email",
                 "firstname",

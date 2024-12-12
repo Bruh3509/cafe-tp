@@ -90,3 +90,21 @@ Below is the ER diagram for the database schema used in the Hotel Room Booking S
 
 ## Swagger and OpenAPI Specification
 Provides OpenAPI Spec, you can easilly read it and understand app's API and moreover you can generate controller stubs by it in different programming languages.
+
+## Deployment Instructions
+1. Clone the repo:
+```code
+git clone https://github.com/Bruh3509/cafe-tp.git
+   ```
+2. Go to the repo directory:
+```code
+cd <repo_dir>
+   ```
+3. Build the docker image:
+```code
+docker build -t <image_name>:latest .
+   ```
+4. Run the container:
+```code   
+docker run -d -p 8080:8080 <image_name>:latest
+```

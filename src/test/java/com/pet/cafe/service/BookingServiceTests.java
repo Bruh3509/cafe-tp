@@ -119,7 +119,7 @@ class BookingServiceTests {
     }
 
     private Booking getBooking(long id){
-        User user = new User(id,
+        User user = new User("1",
                 "passportId",
                 "email",
                 "firstname",
